@@ -1,0 +1,43 @@
+nav{
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+
+    li{
+        display:inline-block;
+        margin-left: 30px;
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 10px;
+        padding: 20px;
+        color: black;
+        font-family: $font-Ubuntu;
+        border-bottom: 10px solid lightgreen;
+     
+    }
+    
+    .highlight{
+        color:white;
+        background-color:limegreen; 
+        transition: background-color linear 0.75s;  
+        border-bottom: 0px;     
+    }    
+    
+}
+
+
+.logo {
+    position: fixed;
+    top: 35px;
+    left: 100px;
+    width: 50px;
+}
