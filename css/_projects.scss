@@ -1,0 +1,46 @@
+.horizontalNavigation{
+    font-size: 2rem;
+    font-weight: bold;
+    position: fixed;
+    bottom: 10vh;
+    left: 5vw;
+    opacity:0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+
+    &.open{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    // Icons
+    display: inline-block;
+    ul{
+        padding: 0;
+        cursor: pointer;
+    
+        li{
+            margin: 10vh;
+            
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            display:block;
+        }   
+        
+        i{
+            padding-top: 1vh;
+            margin-right: 0.5vw;
+            transition: all 0.75s ease-in-out;
+                                
+            &:hover{
+                color: green;
+                animation: bounce 0.75s infinite; 
+            }      
+    
+        }  
+
+    }     
+}
