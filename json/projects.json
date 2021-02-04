@@ -1,0 +1,25 @@
+[
+
+    {
+        "Name": "GameTheSystem",
+        "ProjectName": "ITS Security",
+        "Description": "Modern streamlined process of registering and checking in to ensure the safety of building residents.",
+        "Github": "https://github.com/HACC2020/GameTheSystem",
+        "Other": "https://devpost.com/software/gaming-the-system"
+    },
+    {
+        "Name":"HECO",
+        "ProjectName": "HECO Rewards",
+        "Description": "Earning back by giving back.",
+        "Github": "https://github.com/HACC2019/garys-best",
+        "Other": "https://devpost.com/software/electric-vehicle-charging-analysis-5dv7mo"
+    },
+    {
+        "Name":"Kumu",
+        "ProjectName": "Kumu",
+        "Description": "Kumu is a two-part system for efficient, user-friendly data reporting and visualization for native Hawaiian plants.",
+        "Github": "https://github.com/HACC2018/The-Bird-Squad",
+        "Other": "https://devpost.com/software/kumu"
+    }
+]
+

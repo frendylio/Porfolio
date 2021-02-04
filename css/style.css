@@ -14,7 +14,7 @@ body {
   line-height: 1.3;
   margin: 0px;
   padding: 0px;
-  background-color: white;
+  background-color: #eee;
   color: black;
 }
 
@@ -22,13 +22,34 @@ section {
   height: 100vh;
 }
 
+@media screen and (max-width: 375px) {
+  section {
+    height: 140vh;
+  }
+}
+
 ul, li {
   display: inline;
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  padding: 2vh;
+  position: relative;
+  z-index: -1;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10vh;
+  background-color: lightgreen;
 }
 
 nav {
@@ -65,8 +86,9 @@ nav a {
 }
 
 nav .highlight {
-  color: white;
-  background-color: limegreen;
+  color: black;
+  font-weight: bold;
+  background-color: lightgreen;
   -webkit-transition: background-color linear 0.75s;
   transition: background-color linear 0.75s;
   border-bottom: 0rem;
@@ -180,8 +202,9 @@ kebab .kebab-Background a {
 }
 
 kebab .kebab-Background .highlight {
-  color: white;
-  background-color: limegreen;
+  color: black;
+  font-weight: bold;
+  background-color: lightgreen;
   -webkit-transition: background-color linear 0.75s;
   transition: background-color linear 0.75s;
   border-bottom: 0rem;
@@ -194,21 +217,29 @@ kebab .kebab-Background .highlight {
   width: 3rem;
 }
 
+@media screen and (max-width: 375px) {
+  .logo {
+    width: 1.5rem;
+  }
+}
+
 .aboutMePage {
   font-family: "Ubuntu", sans-serif;
   padding-top: 25vh;
-  max-width: 50vw;
+  max-width: 60vw;
 }
 
 @media screen and (max-width: 1024px) {
   .aboutMePage {
-    max-width: 95vh;
+    max-width: 80vh;
   }
 }
 
 .aboutMePage .heroText {
   color: black;
   text-align: left;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 .aboutMePage .heroText span {
@@ -276,6 +307,7 @@ kebab .kebab-Background .highlight {
 
 .aboutMePage .heroText div {
   margin-left: 5vw;
+  margin-bottom: 1.0vh;
   opacity: 0;
 }
 
@@ -322,6 +354,7 @@ kebab .kebab-Background .highlight {
           animation-delay: 0.9s;
   border-bottom: 0.5rem solid lightgreen;
   border-radius: 0.5rem;
+  margin-top: 5vh;
 }
 
 .aboutMePage .heroText div:nth-child(6) {
@@ -472,6 +505,50 @@ kebab .kebab-Background .highlight {
   }
 }
 
+@-webkit-keyframes slidein {
+  0% {
+    top: 400px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    top: 400px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -400px;
+    opacity: 0;
+  }
+}
+
+@keyframes slideout {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: -400px;
+    opacity: 0;
+  }
+}
+
 .horizontalNavigation {
   font-size: 2rem;
   font-weight: bold;
@@ -516,5 +593,258 @@ kebab .kebab-Background .highlight {
   color: green;
   -webkit-animation: bounce 0.75s infinite;
           animation: bounce 0.75s infinite;
+}
+
+#scene {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+
+#scene #left-zone {
+  background: #fff;
+  height: 75%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 350px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+#scene #left-zone .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+#scene #left-zone .list li.item input[type="radio"] {
+  display: none;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ label {
+  display: block;
+  opacity: 0.5;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ label:first-letter {
+  text-transform: uppercase;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ label:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ label.label_GameTheSystem:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/GameTheSystem_Logo.svg");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ label.label_HECO:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/HecoReward_Logo.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ label.label_Kumu:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../img/Kumu_Logo.png");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content {
+  position: absolute;
+  left: 350px;
+  top: -400px;
+  width: 650px;
+  height: 400px;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-name: slideout;
+          animation-name: slideout;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content.content_GameTheSystem .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/GameTheSystem_Logo.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content.content_GameTheSystem h1 {
+  color: #D64541;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content.content_HECO .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/HecoReward_Logo.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content.content_HECO h1 {
+  color: #D64541;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content.content_Kumu .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../img/Kumu_Logo.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content.content_Kumu h1 {
+  color: #D64541;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content h1:first-letter {
+  text-transform: uppercase;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content p {
+  max-width: 50%;
+  text-align: center;
+}
+
+#scene #left-zone .list li.item input[type="radio"] ~ .content p a {
+  text-decoration: none;
+  color: lightgreen;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  padding: 1vh;
+}
+
+#scene #left-zone .list li.item input[type="radio"]:checked ~ label {
+  opacity: 1;
+  -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_GameTheSystem {
+  color: #D64541;
+  border-right: solid 4px #D64541;
+}
+
+#scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_HECO {
+  color: #D64541;
+  border-right: solid 4px #D64541;
+}
+
+#scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_Kumu {
+  color: #D64541;
+  border-right: solid 4px #D64541;
+}
+
+#scene #left-zone .list li.item input[type="radio"]:checked ~ .content {
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#scene #middle-border {
+  background-color: #eee;
+  height: 75%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 2px;
+  z-index: 0;
+}
+
+#scene #right-zone {
+  background: #fff;
+  height: 100%;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
 }
 /*# sourceMappingURL=style.css.map */

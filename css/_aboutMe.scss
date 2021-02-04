@@ -1,16 +1,19 @@
 .aboutMePage{
     font-family: $font-Ubuntu;
     padding-top: 25vh;
-    max-width: 50vw;
+    max-width: 60vw;
+
 
     // Media queries for pc
     @media screen and (max-width: 1024px){
-        max-width: 95vh;
+        max-width: 80vh;
     }
 
     .heroText{
         color: black;
         text-align: left;
+        padding-left: 10vw;
+        padding-right: 10vw;
         
         // &:hover span{
         //     animation: dance 0.75s infinite; 
@@ -68,6 +71,7 @@
         div{
             
             margin-left: 5vw;
+            margin-bottom: 1.0vh;
             opacity: 0;
 
             &.animated{
@@ -81,7 +85,7 @@
             &:nth-child(2){
                 font-size: 3.0rem;
                 font-weight: bold;
-                border-bottom: 0.5rem solid lightgreen;
+                border-bottom: 0.5rem solid $green;
                 border-radius: 0.5rem;
                 animation-delay: 0.3s;
             }
@@ -101,8 +105,9 @@
                 font-size: 2rem;
                 font-weight: bold;
                 animation-delay: 0.9s;
-                border-bottom: 0.5rem solid lightgreen;
+                border-bottom: 0.5rem solid $green;
                 border-radius: 0.5rem;
+                margin-top: 5vh;
             }
             &:nth-child(6){
                 font-size: 2rem;
