@@ -1,6 +1,7 @@
-$menu-width: 350px;
-$scene-width: 1000px;
-$scene-height: 400px;
+$menu-width: 25vw;
+$scene-width: 75vw;
+$scene-height: 50vh;
+
 // Jumping keys
 @keyframes dance {
     0%{
@@ -59,27 +60,57 @@ $scene-height: 400px;
     }
 }
 
-
+// =============
+// For Carousel
+//==============
 @keyframes slidein {
     0% {
-      top: $scene-height;
-      opacity: 0;
+        top: $scene-height;
+        opacity: 0;
     }
-    
+
     100%{
-      opacity: 1;
-      top: 0px;
+        opacity: 1;
+        top: 0px;
     }
-  }
+}
   
-  @keyframes slideout {
+@keyframes slideout {
     0% {
-      top: 0;
-      opacity: 1;
+        top: 0;
+        opacity: 1;
     }
-    
+
     100% {
-      top: -$scene-height;
-      opacity: 0;
+        top: -$scene-height;
+        opacity: 0;
     }
-  }
+}
+
+@keyframes slideinMobile {
+    0% {
+        left: 0;
+        opacity: 0;
+        top: 0;
+    }
+
+    100%{
+        top: 0;
+        opacity: 1;
+        left: 12vw;
+    }
+}
+  
+@keyframes slideoutMobile {
+    0% {
+        top: 0;
+        left: 12vw;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+}

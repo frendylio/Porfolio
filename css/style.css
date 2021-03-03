@@ -507,7 +507,7 @@ kebab .kebab-Background .highlight {
 
 @-webkit-keyframes slidein {
   0% {
-    top: 400px;
+    top: 50vh;
     opacity: 0;
   }
   100% {
@@ -518,7 +518,7 @@ kebab .kebab-Background .highlight {
 
 @keyframes slidein {
   0% {
-    top: 400px;
+    top: 50vh;
     opacity: 0;
   }
   100% {
@@ -533,7 +533,7 @@ kebab .kebab-Background .highlight {
     opacity: 1;
   }
   100% {
-    top: -400px;
+    top: -50vh;
     opacity: 0;
   }
 }
@@ -544,7 +544,59 @@ kebab .kebab-Background .highlight {
     opacity: 1;
   }
   100% {
-    top: -400px;
+    top: -50vh;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideinMobile {
+  0% {
+    left: 0;
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    left: 12vw;
+  }
+}
+
+@keyframes slideinMobile {
+  0% {
+    left: 0;
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    left: 12vw;
+  }
+}
+
+@-webkit-keyframes slideoutMobile {
+  0% {
+    top: 0;
+    left: 12vw;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes slideoutMobile {
+  0% {
+    top: 0;
+    left: 12vw;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
     opacity: 0;
   }
 }
@@ -560,6 +612,12 @@ kebab .kebab-Background .highlight {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   display: inline-block;
+}
+
+@media screen and (max-width: 1280px) {
+  .horizontalNavigation {
+    font-size: 1rem;
+  }
 }
 
 .horizontalNavigation.open {
@@ -605,8 +663,8 @@ kebab .kebab-Background .highlight {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  width: 1000px;
-  height: 400px;
+  width: 75vw;
+  height: 50vh;
   position: relative;
   top: 0;
   bottom: 0;
@@ -619,6 +677,16 @@ kebab .kebab-Background .highlight {
   overflow: hidden;
 }
 
+@media screen and (max-width: 1280px) {
+  #scene {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 75vh;
+  }
+}
+
 #scene #left-zone {
   background: #fff;
   height: 75%;
@@ -628,13 +696,23 @@ kebab .kebab-Background .highlight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 350px;
+  width: 25vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    height: 35%;
+    width: 55%;
+  }
 }
 
 #scene #left-zone .list {
@@ -655,6 +733,21 @@ kebab .kebab-Background .highlight {
   padding: 0;
 }
 
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item {
+    width: 15vw;
+  }
+}
+
 #scene #left-zone .list li.item input[type="radio"] {
   display: none;
 }
@@ -662,9 +755,9 @@ kebab .kebab-Background .highlight {
 #scene #left-zone .list li.item input[type="radio"] ~ label {
   display: block;
   opacity: 0.5;
-  height: 50px;
+  height: 3rem;
   text-align: center;
-  line-height: 50px;
+  line-height: 3rem;
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ label:first-letter {
@@ -680,47 +773,71 @@ kebab .kebab-Background .highlight {
   content: " ";
   display: block;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 3vw;
   background-image: url("../img/GameTheSystem_Logo.svg");
   background-position: center;
   background-size: 75% 75%;
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ label.label_GameTheSystem:before {
+    margin-left: 0vw;
+  }
+}
+
 #scene #left-zone .list li.item input[type="radio"] ~ label.label_HECO:before {
   content: " ";
   display: block;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 3vw;
   background-image: url("../img/HecoReward_Logo.png");
   background-position: center;
   background-size: 75% 75%;
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ label.label_HECO:before {
+    margin-left: 0vw;
+  }
+}
+
 #scene #left-zone .list li.item input[type="radio"] ~ label.label_Kumu:before {
   content: " ";
   display: block;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 3vw;
   background-image: url("../img/Kumu_Logo.png");
   background-position: center;
   background-size: 75% 75%;
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ label.label_Kumu:before {
+    margin-left: 0vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ label {
+    font-size: 0;
+  }
+}
+
 #scene #left-zone .list li.item input[type="radio"] ~ .content {
   position: absolute;
-  left: 350px;
-  top: -400px;
-  width: 650px;
-  height: 400px;
+  left: 25vw;
+  top: -50vh;
+  width: 50vw;
+  height: 50vh;
   -webkit-animation-duration: 0.75s;
           animation-duration: 0.75s;
   -webkit-animation-name: slideout;
@@ -742,13 +859,31 @@ kebab .kebab-Background .highlight {
           flex-direction: column;
 }
 
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ .content {
+    left: 13vw;
+    font-size: 0.9rem;
+    height: 75%;
+    top: 100%;
+    -webkit-animation-name: slideoutMobile;
+            animation-name: slideoutMobile;
+  }
+}
+
 #scene #left-zone .list li.item input[type="radio"] ~ .content.content_GameTheSystem .picto {
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
   background-image: url("../img/GameTheSystem_Logo.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ .content.content_GameTheSystem .picto {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ .content.content_GameTheSystem h1 {
@@ -756,12 +891,19 @@ kebab .kebab-Background .highlight {
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ .content.content_HECO .picto {
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
   background-image: url("../img/HecoReward_Logo.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ .content.content_HECO .picto {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ .content.content_HECO h1 {
@@ -769,12 +911,19 @@ kebab .kebab-Background .highlight {
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ .content.content_Kumu .picto {
-  height: 100px;
-  width: 100px;
+  height: 5rem;
+  width: 5rem;
   background-image: url("../img/Kumu_Logo.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ .content.content_Kumu .picto {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ .content.content_Kumu h1 {
@@ -788,6 +937,12 @@ kebab .kebab-Background .highlight {
 #scene #left-zone .list li.item input[type="radio"] ~ .content p {
   max-width: 50%;
   text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"] ~ .content p {
+    max-width: 100%;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"] ~ .content p a {
@@ -806,17 +961,50 @@ kebab .kebab-Background .highlight {
 
 #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_GameTheSystem {
   color: #D64541;
-  border-right: solid 4px #D64541;
+  border-left: solid 0.2rem #D64541;
+  padding-left: 0.5vw;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_GameTheSystem {
+    border-left: 0rem;
+    border-bottom: solid 0.2rem #D64541;
+    padding-left: 0;
+    width: 3rem;
+    font-size: 0;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_HECO {
   color: #D64541;
-  border-right: solid 4px #D64541;
+  border-left: solid 0.2rem #D64541;
+  padding-left: 0.5vw;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_HECO {
+    border-left: 0rem;
+    border-bottom: solid 0.2rem #D64541;
+    padding-left: 0;
+    width: 3rem;
+    font-size: 0;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_Kumu {
   color: #D64541;
-  border-right: solid 4px #D64541;
+  border-left: solid 0.2rem #D64541;
+  padding-left: 0.5vw;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_Kumu {
+    border-left: 0rem;
+    border-bottom: solid 0.2rem #D64541;
+    padding-left: 0;
+    width: 3rem;
+    font-size: 0;
+  }
 }
 
 #scene #left-zone .list li.item input[type="radio"]:checked ~ .content {
@@ -830,14 +1018,36 @@ kebab .kebab-Background .highlight {
           animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
+@media screen and (max-width: 1280px) {
+  #scene #left-zone .list li.item input[type="radio"]:checked ~ .content {
+    left: 13vw;
+    font-size: 0.9rem;
+    height: 75%;
+    top: 100%;
+    -webkit-animation-name: slideinMobile;
+            animation-name: slideinMobile;
+  }
+}
+
 #scene #middle-border {
   background-color: #eee;
   height: 75%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  max-width: 2px;
+  max-width: 0.2rem;
   z-index: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #middle-border {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    max-width: 95%;
+    width: 100%;
+    height: 0.2rem;
+  }
 }
 
 #scene #right-zone {
@@ -846,5 +1056,13 @@ kebab .kebab-Background .highlight {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
           flex-grow: 3;
+}
+
+@media screen and (max-width: 1280px) {
+  #scene #right-zone {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
