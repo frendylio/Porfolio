@@ -1,0 +1,85 @@
+.introduction{
+    line-height: 1.5rem;
+    font-family: $font-Ubuntu;
+    text-align: justify;
+    padding-left: 15vw;
+    padding-right: 10vw;
+    max-width: 100vw;
+
+    @media screen and (max-width: 640px){
+        line-height: 1.5rem;
+    }    
+
+    // Make table
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 2vw;
+
+        @media screen and (max-width: 1024px){
+            width: 100%;
+
+        }    
+
+        &.introductionText{
+            max-width: 50%;
+
+            @media screen and (max-width: 1024px){
+                max-width: 100%;
+            }    
+
+            ul{
+    
+                li{
+                    display: block;
+                    list-style-type: square;
+                    list-style-position: inside;
+                    display:list-item;
+
+                    @media screen and (max-width: 640px){
+                        list-style-type: none;
+                    }                        
+                }
+                
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    
+        &.introductionImage{
+            text-align: center;
+            img{
+                margin-top: 3vh;
+                margin-left: 5vw;
+                height: 20vw;
+                width: 20vw;
+                border-radius: 50%;
+                object-fit: cover;
+                box-shadow: 10px 10px 5px #ccc;
+
+                
+                @media screen and (max-width: 1024px){
+                    margin-top: 0;
+                }
+                
+                @media screen and (max-width: 640px){
+                    height: 50vw;
+                    width: 50vw;
+                }                    
+            }
+        }        
+    }
+
+
+
+}

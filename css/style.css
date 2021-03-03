@@ -1065,4 +1065,95 @@ kebab .kebab-Background .highlight {
             order: 1;
   }
 }
+
+.introduction {
+  line-height: 1.5rem;
+  font-family: "Ubuntu", sans-serif;
+  text-align: justify;
+  padding-left: 15vw;
+  padding-right: 10vw;
+  max-width: 100vw;
+}
+
+@media screen and (max-width: 640px) {
+  .introduction {
+    line-height: 1.5rem;
+  }
+}
+
+.introduction:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.introduction .column {
+  float: left;
+  width: 50%;
+  padding: 2vw;
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction .column {
+    width: 100%;
+  }
+}
+
+.introduction .column.introductionText {
+  max-width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction .column.introductionText {
+    max-width: 100%;
+  }
+}
+
+.introduction .column.introductionText ul li {
+  display: block;
+  list-style-type: square;
+  list-style-position: inside;
+  display: list-item;
+}
+
+@media screen and (max-width: 640px) {
+  .introduction .column.introductionText ul li {
+    list-style-type: none;
+  }
+}
+
+.introduction .column.introductionText a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.introduction .column.introductionImage {
+  text-align: center;
+}
+
+.introduction .column.introductionImage img {
+  margin-top: 3vh;
+  margin-left: 5vw;
+  height: 20vw;
+  width: 20vw;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+          box-shadow: 10px 10px 5px #ccc;
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction .column.introductionImage img {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .introduction .column.introductionImage img {
+    height: 50vw;
+    width: 50vw;
+  }
+}
 /*# sourceMappingURL=style.css.map */
