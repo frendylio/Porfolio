@@ -52,6 +52,12 @@ ul, li {
   background-color: lightgreen;
 }
 
+@media screen and (max-width: 640px) {
+  .title {
+    margin-bottom: 5vh;
+  }
+}
+
 nav {
   position: fixed;
   top: 6vh;
@@ -1077,7 +1083,7 @@ kebab .kebab-Background .highlight {
 
 @media screen and (max-width: 640px) {
   .introduction {
-    line-height: 1.5rem;
+    line-height: 1rem;
   }
 }
 
@@ -1152,8 +1158,8 @@ kebab .kebab-Background .highlight {
 
 @media screen and (max-width: 640px) {
   .introduction .column.introductionImage img {
-    height: 50vw;
-    width: 50vw;
+    height: 30vw;
+    width: 30vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -76,6 +76,9 @@ ul, li {
     // }
     // Media queries for pc
 
+    @media screen and (max-width: 640px){
+        margin-bottom: 5vh;
+    }    
 
 
 
