@@ -1,146 +1,113 @@
-.aboutMePage{
-    font-family: $font-Ubuntu;
-    padding-top: 25vh;
-    max-width: 60vw;
+// https://stackoverflow.com/questions/47195391/sass-compare-vh-and-px-with-min-function
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+  
+.gridContainerAboutMe{
+    padding-left: 16.8vw;
+    padding-right: 16.8vw;
+    padding-top: 13.28vh;
+    padding-bottom: 4.2vh;
+    flex-direction: column;
+    display: flex;	
+    align-items: center;
+    @media screen and (max-width: 800px){	
+        padding-left: 1.5vw;	
+        padding-right: 1.5vw;	
+        padding-top: 5.25vh;	
+        align-items: center;
 
+    }  
 
-    // Media queries for pc
-    @media screen and (max-width: 1024px){
-        max-width: 80vh;
+    .gridItemTitle{
+        font-family: $font-Georgia;
+        font-weight: bold;
+        font-size: 3.5rem;
+        color: $gray;
+        padding-bottom: min(3vh, 30px);
+
+        @media screen and (max-width: 800px){	
+            color: $blue;	
+            font-family: $font-Arial;	
+            font-size: 0.875rem;	
+        }         
     }
 
-    .heroText{
-        color: black;
-        text-align: left;
-        padding-left: 10vw;
-        padding-right: 10vw;
-        
-        // &:hover span{
-        //     animation: dance 0.75s infinite; 
-        //     cursor: pointer;  
-        // }     
+    .gridItemBody{
+        display: grid;
+        grid-template-columns: 5fr 3fr;
 
-        // ===============================
-        // Delay animation jump
-        // ===============================
-        span{
-            display: inline-block;
+        @media screen and (max-width: 1280px){	
+            grid-template-columns: 1fr;
+        } 
 
-            &:nth-child(1){
-                animation-delay: .1s;
-            }
-            &:nth-child(2){
-                animation-delay: .3s;
-            }
-            &:nth-child(3){
-                animation-delay: .5s;
-            }
-            &:nth-child(4){
-                animation-delay: .7s;
-            }
-            &:nth-child(5){
-                animation-delay: .9s;
-            }
-            &:nth-child(6){
-                animation-delay: 1.1s;
-            }  
-            &:nth-child(7){
-                color: white;
-            }
-            &:nth-child(8){
-                animation-delay: 1.3s;
-                
-            }                                                                                                                                                   
-            &:nth-child(9){
-                animation-delay: 1.5s;
-            }  
-            &:nth-child(10){
-                animation-delay: 1.7s;
+        .ItemImage{
+            align-items: vertical;
+            padding-left: 10vh;
+            padding-top: 10vh;
+
+            @media screen and (max-width: 1280px){	
+                align-items: none;
+                text-align: center;
+                padding: 0;	
+                padding-top: 5.7vh;
             } 
-            &:nth-child(11){
-                animation-delay: 1.9s;
-            }          
-            &:nth-child(12){
-                animation-delay: 2.1s;
-            }                                                                                                       
+
+            img{
+                height: 10vw;
+                width: 10vw;
+
+                @media screen and (max-width: 800px){	
+	                height: 40vw;	
+                    width: 40vw;	
+                    max-width: 200px;
+                    max-height: 200px;
+                } 
+
+                object-fit: cover;
+                box-shadow: 10px 10px 5px #ccc;
+                 
+            }
         }
 
-        // ===========
-        // Words from about me
-        // ===========
-        div{
-            
-            margin-left: 5vw;
-            margin-bottom: 1.0vh;
-            opacity: 0;
+        .ItemBody{
+            font-family: $font-Segoe;
+            font-size: 1.25rem;
+            line-height: 1.68rem;
+            color: $black;
 
-            &.animated{
-                animation: fadeInOpacity 2s forwards;
-            }
-
-            &:nth-child(1){
-                font-size: 1.1rem;
-                animation-delay: .1s;
-            }
-            &:nth-child(2){
-                font-size: 3.0rem;
-                font-weight: bold;
-                border-bottom: 0.5rem solid $green;
-                border-radius: 0.5rem;
-                animation-delay: 0.3s;
-            }
-            &:nth-child(3){
-                font-size: 2rem;
-                font-weight: bold;
-                animation-delay: 0.5s;
-            }
-            &:nth-child(4){
-                margin-top: 1vh;
-                text-align: justify;
-                font-size: 1.1rem;
-                animation-delay: 0.7s;
-            }      
-            &:nth-child(5){
+            p{
+                margin: 0;
                 margin-top: 2vh;
-                font-size: 2rem;
-                font-weight: bold;
-                animation-delay: 0.9s;
-                border-bottom: 0.5rem solid $green;
-                border-radius: 0.5rem;
-                margin-top: 5vh;
-            }
-            &:nth-child(6){
-                font-size: 2rem;
-                font-weight: bold;
-                animation-delay: 1.1s;
 
-                // Icons
-                ul{
-                    padding: 0;
-                    cursor: pointer;
-                
-                    a {
-                        text-decoration: none;
-                        color: black;
-                    }   
-                    
-                    i{
-                        padding-top: 1vh;
-                        margin-right: 0.5vw;
-                        transition: all 0.75s ease-in-out;
-                                            
-                        &:hover{
-                            color: green;
-                            animation: bounce 0.75s infinite; 
-                        }      
-                
-                    }  
-
-                }                          
-            }                    
-        }
-   
-    }
-
+                @media screen and (max-width: 1280px){
+                    &:nth-child(3){
+                        visibility: hidden;
+                        font-size: 0;
+                        margin: 0;
+                        height: 0;
+                    }
+                }
     
+            }
+
+            ul{
+
+                @media screen and (max-width: 1280px){
+
+                        visibility: hidden;
+                        font-size: 0;
+                        margin: 0;
+                        height: 0;
+                    
+                }
+
+                li{
+                    &::before{
+                        content:"+";
+                    }
+                }
+            }
+        }
+    }
 }

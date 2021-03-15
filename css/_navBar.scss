@@ -1,0 +1,223 @@
+navWebsite{
+    // Media queries for pc
+    @media screen and (max-width: 800px){
+        visibility: hidden;
+    }
+
+    background-color: $blue;
+    width:100%;
+    min-height: 70px;
+    height: 9.11vh;
+    max-height: 80px;
+    
+    position: fixed;
+    top: 0px;
+    z-index: 20;
+
+    .leftPanel{
+        width: 100%;
+        ul{
+            height: inherit;
+
+            li{
+                font-family: $font-Arial;
+                color: $white;
+                font-size: 0.8rem;
+                margin-left: 3.66vw;
+                margin-top: 3.66vh;
+            }   
+        }
+    
+    }
+
+    .rightPanel{
+        text-align: right;
+        width: 100%;
+        ul{
+
+            height: inherit;
+
+            li{
+                font-family: $font-Arial;
+                color: $white;
+                font-size: 1rem;
+                margin-right: 2.34vw;
+                margin-top: 3.52vh;
+            }   
+        }
+    
+    }
+
+    img{
+        height: 28px;
+        width: 31px;
+        margin-top: 2.6vh;
+        margin-left: 2.49vw;
+        max-width: none;
+    } 
+}
+
+navMobile{
+    // Media queries for pc
+    @media screen and (min-width: 800px){
+        visibility: hidden;
+    }
+
+    width:78.9vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    &.open{
+        z-index: 20;
+    }
+    .gridNavContainer{
+        flex-direction: column;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        transform: translateX(-100vw);
+        transition: all 1s;
+
+        &.open{
+            transform: translateX(0);
+        }
+
+        .topPart{
+            height: 17.39vh;
+            width: 100%;
+            background-color: $blue;
+            font-family: $font-Arial;
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: white;
+            
+            .navTitle{
+                position: fixed;
+                margin-top: 5.62vh;
+                margin-left: 20.6vw;
+            }
+
+            img{
+                height: 28px;
+                width: 31px;
+                max-width: none;
+                margin-top: 4.5vh;
+                margin-left: 7.2vw;
+                position: fixed;
+            } 
+        }
+
+        .bottomPart{
+            height: 100%;
+            width: 100%;
+            background-color: $light-blue;    
+            font-family: $font-Arial;
+            color: white;
+
+            .bottomPartOne{
+                ul{
+                    
+                    font-size: 0.625rem;
+                    font-weight: bold;
+
+                    li{
+                        display: block;
+                        height: 9.6vh;
+                        border-bottom: rgba($color: $blue, $alpha: 0.2) 0.1rem solid ;
+                        
+                        i{
+                            font-size: 1rem;
+                            padding-top: 2.7vh;
+                            padding-left: 7.2vw;
+                            padding-right: 5.2vw;
+                            max-width: 16vw;
+                            align-items: left;
+                        }
+                    }
+                }
+            }
+
+            .bottomPartTwo{
+                margin-top: 27.13vh;
+                text-align: center;
+                font-family: $font-Segoe;
+                
+                ul{
+                    li{
+                        padding-right: 2.92vw;
+                        padding-left: 2.92vw;
+                    }
+                }
+
+                .textEnding{
+                    margin-top: 4.04vh;
+                    font-size: 1rem;
+                    line-height: 1.25rem;
+                }
+            }
+        }
+
+    }
+
+    hamburger{
+        position: fixed;
+        width: 4.3vw;
+        height: 4.3vw;
+        margin-top: 5.1vh;
+        margin-left: 4.53vw;
+        cursor: pointer;
+
+        span{
+            width: inherit;
+            height: 0.3vh;
+            position: fixed;
+            background-color: $blue;
+            transition: all 1s;
+
+            &::before{
+                content: "";
+                display:block;
+                height: 0.3vh;
+                transform: translateY(0.75vh);
+                background-color: $blue;
+                transition: all 1s;
+            }
+
+            &::after{
+                content: "";
+                display:block;
+                height: 0.3vh;
+                width: 50%;
+                transform: translateY(1.25vh);
+                background-color: $blue;
+                transition: all 1s;
+            }
+        }
+
+        &.open{
+            
+            span{
+                background-color: transparent;
+                transform: translateX(78.13vw);
+                &::before{
+                    transform: rotate(45deg);
+                }      
+                
+                &::after{
+                    width:100%;
+                    transform: translateY(-0.35vh) rotate(-45deg);
+                }  
+            }
+
+        
+        }
+        
+    }
+}
+
+
+
+

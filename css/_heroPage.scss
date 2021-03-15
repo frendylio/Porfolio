@@ -1,0 +1,124 @@
+.gridContainer{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    .gridItemName{
+        padding: 0;
+        margin: 0;
+
+        padding-top: 17.84vh;
+        font-family: $font-Georgia;
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: $gray;
+
+        @media screen and (max-width: 1024px){
+            padding-top: 15vh;
+            font-size: 3.125rem;
+        }
+
+    }
+
+    .gridItemPhrase{
+        padding: 0;
+        margin: 0;
+
+        padding-top: 5.86vh;
+        font-family: $font-Arial;
+        font-size: 1.875rem;
+        color: $gray;
+        text-align: center;
+
+        @media screen and (max-width: 1024px){
+            font-size: 1.875rem;
+            padding-top: 2.55vh;
+        }
+    }
+
+    .gridItemDescription{
+        padding: 0;
+        margin: 0;
+
+        padding-top: 1.83vh;
+        font-family: $font-Segoe;
+        font-size: 1.25rem;
+        line-height: 3.51vh;
+        text-align: center;
+        max-width: 45vw;
+        color: $gray;
+
+        @media screen and (max-width: 1023px){
+            padding-top: 2.84vh;
+            line-height: 1.68rem;
+            max-width: 100%;
+        }
+    }
+
+    .gridItemButtons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        padding: 0;
+        margin: 0;
+
+        padding-top: 4.55vh;
+        
+        @media screen and (max-width: 1024px){
+            padding-top: 4.5vh;
+            grid-template-columns: 1fr;
+        }        
+        
+        button{
+            height: 7.42vh;
+            width: 12.45vw;
+            font-family: $font-Arial;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: none;
+            background: none;
+            cursor: pointer;
+            &:focus, &:active{
+                outline: none;
+            }
+
+            &.buttonOne{
+                @media screen and (max-width: 1024px){
+                    width: 44.3vw;
+                    height: 8.55vh;
+                    font-size: 0.75rem;
+                }
+                
+                
+                margin-right: 0.59vw;
+                color: $white;
+                background-color: $blue;
+                border-width: 0px;
+                border-radius: 5px;
+
+                &:active, &:hover{
+                    background-color: $dark-blue;
+                }
+            }
+
+            &.buttonTwo{
+                @media screen and (max-width: 1024px){
+                    visibility: hidden;
+                }
+
+                margin-left: 0.59vw;
+                color: $blue;
+                background-color: $white;
+                box-shadow: 0;
+                border: 2px solid $cyan;
+
+                border-radius: 5px;
+
+                &:active, &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+}

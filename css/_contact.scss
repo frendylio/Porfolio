@@ -1,0 +1,106 @@
+
+
+// https://stackoverflow.com/questions/47195391/sass-compare-vh-and-px-with-min-function
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+  
+.gridContainerContact{
+    padding-left: 16.8vw;
+    padding-right: 16.8vw;
+    padding-top: 13.28vh;
+    padding-bottom: 4.2vh;
+    flex-direction: column;
+    display: flex;	
+    align-items: center;
+    @media screen and (max-width: 800px){	
+        padding-left: 1.5vw;	
+        padding-right: 1.5vw;	
+        padding-top: 5.25vh;	
+        align-items: center;
+
+    }  
+
+    .gridItemTitle{
+        font-family: $font-Georgia;
+        font-weight: bold;
+        font-size: 3.5rem;
+        color: $gray;
+        padding-bottom: min(3vh, 30px);
+        text-align: left;
+        @media screen and (max-width: 800px){	
+            color: $blue;	
+            font-family: $font-Arial;	
+            font-size: 0.875rem;	
+        }         
+    }
+
+    .gridItemBody{
+        box-shadow: 10px 10px 5px $cyan;
+        background-color: $white;
+        width: 45vw;
+        height: 50vh;
+
+        font-family: $font-Arial;
+        font-size: 2rem;
+        color: $gray;
+        padding-left: 12.5vw;
+        padding-right: 12.5vw;
+        padding-top: 10vh;
+
+        @media screen and (max-width: 1024px){	
+            padding-left: 5vw;
+            padding-right: 5vw;
+            padding-top: 5vh;
+            width: 75vw;
+            font-size: 1.5rem;
+        } 
+
+        text-align: center;
+
+        .gridItemButtons{
+
+    
+            padding: 0;
+            margin: 0;
+    
+            padding-top: 4.55vh;
+            
+            
+            button{
+                height: 7.42vh;
+                width: 12.45vw;
+                font-family: $font-Arial;
+                font-size: 0.85rem;
+                font-weight: bold;
+                border: none;
+                background: none;
+                cursor: pointer;
+                &:focus, &:active{
+                    outline: none;
+                }
+    
+                &.buttonTwo{
+                    @media screen and (max-width: 1024px){
+                        width: 44.3vw;
+                        height: 8.55vh;
+                        font-size: 1rem;
+                    }
+                    
+                    
+                    margin-right: 0.59vw;
+                    color: $white;
+                    background-color: $blue;
+                    border-width: 0px;
+                    border-radius: 5px;
+    
+                    &:active, &:hover{
+                        background-color: $dark-blue;
+                    }
+                }
+    
+            }
+        }
+      
+    }
+}

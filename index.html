@@ -23,198 +23,467 @@
     
 </head>
 <body>
-    <div class="container">
-        
-        <img src="./img/Logo.png" alt="logo" class="logo">
-
-        <!-- Nav bar website-->
-        <nav>
-            <ul>
-                <li><a href="#aboutMe" class="aboutMe highlight">Home</a></li>
-                <li><a href="#projects" class="projects">Projects</a></li>
-                <li><a href="#skills" class="skills">About me</a></li>
-                <li><a href="#contactMe" class="contactMe">Contact me</a></li>
-            </ul>
-        </nav>
-
-        <!-- Kebab bar website-->
-        <kebab>
-            <div class="kebab-Btn">
-            </div>
-            <div class="kebab-Background"> 
+    <navWebsite>
+        <container>
+            <img src="img/Logo.png">
+            <div class="leftPanel">
                 <ul>
-                    <li><a href="#aboutMe" class="aboutMe highlight">Home</a></li>
-                    <li><a href="#projects" class="projects">Projects</a></li>
-                    <li><a href="#skills" class="skills">About me</a></li>
-                    <li><a href="#contactMe" class="contactMe">Contact me</a></li>
+                    <li>
+                        <a href="#aboutMePage">ABOUT ME</a>
+                    </li>
+                    <li>
+                        <a href="#projectsPage">PROJECTS</a>
+                    </li>
+                    <li>
+                        <a href="#workPage">WORK</a>
+                    </li>
+                    <li>
+                        <a href="#contactMePage">CONTACT</a>
+                    </li>
                 </ul>
             </div>
-        </kebab>
-
-
-        <section id="aboutMe" class="aboutMePage">
-            <div class="heroText">
-                <div class="animated">
-                    Aloha, I am
-                </div>
-                <div class="animated">
-                    Frendy Lio!
-                </div>                              
-                <div class="animated">
-                    I develop for the community.
-                </div>
-                <div class="animated">
-                    I am a Master's student in Electrical Engineering at the University of Hawaii at Manoa, Honolulu, Hawaii. I specialize in database development and I am open to new experiences.
-                    Currently looking for an internship or a full-time position.
-                </div>  
-                <div class="animated">
-                    Lets keep in touch!
-                </div>
-                <div class="animated">    
-                    <ul>
-                        <a href="https://www.linkedin.com/in/frendylio/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/frendylio" target="_blank"><i class="fab fa-github-square"></i></a>
-                        <a href="https://stackoverflow.com/users/14957079/frendy-lio-can" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                        <a href="mailto:frendy@hawaii.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-                    </ul>                 
-                </div>             
-            </div>
-        </section> 
-              
-
-        <section id="projects">
-            <div class="title"> 
-                <div class="title_Background">Projects</div>  
-            </div>
-            
-            <!-- Navigation To left -->
-            <div class="horizontalNavigation">
+            <div class="rightPanel">
                 <ul>
-                    <a href="https://www.linkedin.com/in/frendylio/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/frendylio" target="_blank"><i class="fab fa-github-square"></i></a>
-                    <a href="https://stackoverflow.com/users/14957079/frendy-lio-can" target="_blank"><i class="fab fa-stack-overflow"></i></a>
-                    <a href="mailto:frendy@hawaii.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-                </ul>                 
+                    <li>
+                        <a href="https://www.linkedin.com/in/frendylio/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/frendylio" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/users/14957079/frendy-lio-can" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:frendy@hawaii.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </li>
+                </ul>
             </div>
+        </container>        
+    </navWebsite>
 
-            <!-- Carousel -->
-            <div id="scene">
-                <div id="left-zone">
-                    <ul class="list" id="list">
-                    </ul>
+    <navMobile>
+        <hamburger>
+            <span></span>
+        </hamburger>
+
+        <container class="gridNavContainer">
+            <div class="topPart">
+                <img src="img/Logo.png" alt="logo">
+                <div class="navTitle">
+                    Frendy Lio - Portfolio
                 </div>
-                <div id="middle-border"></div>
-                <div id="right-zone"></div>
             </div>
-
-
-        </section>
-        <section id="skills">
-            <div class="title"> 
-                <div class="title_Background">About me</div>  
-            </div>
-            <div class="introduction">
-                <div class="introductionText column">
-                    Aloha! I am Frendy, a master's student in electrical engineering at the <b>University of Hawaii at Manoa</b>, Honolulu, HI.
-                    <br><br>
-                    I enjoy exploring and succeeding with challenges outside my area of expertise; whether via hackathons or personal projects. My goal is to build and provide products that will help and impact us positively!
-                    <br><br>
-                    I will be graduating in <b>December 2021</b> and currently working as a Lead SQL Developer at <a href="https://www.star.hawaii.edu/studentinterface/">STAR</a> where I play a role in advising and creating new features database architecture features for STAR. 
-                    <br><br>
-                    Here is a list of tools I am comfortable using!
-    
+            <div class="bottomPart">
+                <div class="bottomPartOne">
                     <ul>
                         <li>
-                            <b>Back-End:</b> T-SQL, MS Access, C#, Rest-API, IIS
+                            <i class="far fa-smile-beam"></i>
+                            <a href="#aboutMePage">ABOUT ME</a>
                         </li>
                         <li>
-                            <b>Frameworks:</b> Angular, React, VueJS
+                            <i class="fas fa-star"></i>
+                            <a href="#projectsPage">PROJECTS</a>
                         </li>
                         <li>
-                            <b>Web Development:</b> JavaScript, HTML, CSS
+                            <i class="fas fa-briefcase"></i>
+                            <a href="#workPage">WORK</a>
                         </li>
                         <li>
-                            <b>Scripting and System Level:</b> Python, C, C++
-                        </li>
-                        <li>
-                            <b>Source Control:</b> GitKraken, Git
+                            <i class="fas fa-envelope"></i>
+                            <a href="#contactMePage">CONTACT</a>
                         </li>
                     </ul>
                 </div>
-                <div class="introductionImage column">
-                    <img src="img/selfImage.jpg" alt="selfImage">
+                <div class="bottomPartTwo">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/frendylio/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/frendylio" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/14957079/frendy-lio-can" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                        </li>
+                        <li>
+                            <a href="mailto:frendy@hawaii.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                        </li>
+                    </ul>
+                    <div class="textEnding">
+                        Designed & Built by Frendy Lio <br>
+                        <a href="mailto:frendy@hawaii.edu" target="_blank">frendy@hawaii.edu</i></a>
+                    </div>
                 </div>
-            </div>
+            </div>            
+        </container>        
+    </navMobile>
 
-        </section> 
-        <section id="contactMe">
-            <div class="title"> 
-                <div class="title_Background">Contact Me</div>  
+    <!-- ======================== -->
+    <!-- HERO PAGE                -->
+    <!-- ======================== -->
+    <div class="backgroundColor" id="heroPage">
+        <container class="gridContainer body" >
+            <div class="gridItemName">
+                    Frendy Lio
             </div>
-        </section>             
-        
+            <div class="gridItemPhrase">
+                I develop for the community
+            </div>
+            <div class="gridItemDescription">
+                I am a Master's student in Electrical Engineering at the University of Hawaii at Manoa, Honolulu, Hawaii. I specialize in database development and I am open to new experiences. Currently looking for an internship or a full-time position.
+            </div>  
+            <div class="gridItemButtons">
+                <a href="#aboutMePage">
+                    <button class="buttonOne">
+                        Learn More About Me!
+                    </button>
+                </a>
+                <a href="mailto:frendy@hawaii.edu">
+                    <button class="buttonTwo">
+                        Let's Keep in Touch!
+                    </button>
+                </a>
+            </div>
+        </container>
     </div>
 
-    <script src="./js/main.js"></script>
+    <!-- ======================== -->
+    <!-- ABOUT ME                 -->
+    <!-- ======================== -->
+    <div class="backgroundColor" id="aboutMePage">
+        <container class="gridContainerAboutMe body" >
+            <div class="gridItemTitle">
+                    About Me
+            </div> 
+            <div class="gridItemBody">
+                <div class="ItemBody">
+                    <p>
+                        Aloha! I am Frendy, a master's student in electrical engineering at the University of Hawaii at Manoa, Honolulu, HI.
+                    </p>
+
+                    <p>
+                        I enjoy exploring and succeeding with challenges outside my area of expertise; whether via hackathons or personal projects. My goal is to build and provide products that will help and impact us positively!
+                    </p>
+
+                    <p>
+                        Here is a list of tools I am comfortable using!
+                    </p>
+                    <ul>
+                        <li>
+                            Back-End: T-SQL, MS Access, C#, Rest-API, IIS 
+                        </li>
+                        <li>
+                            Frameworks: Angular, React, VueJS
+                        </li>
+                        <li>
+                            Web Development: JavaScript, HTML, CSS
+                        </li>
+                        <li>
+                            Scripting and System Level: Python, C, C++
+                        </li>
+                        <li>
+                            Source Control: GitKraken, Git
+                        </li>
+                    </ul>
+                </div>
+                <div class="ItemImage">
+                    <img src="img/selfImage.jpg" alt="Frendy_Image">
+                </div>
+            </div>
+        </container>
+    </div>
+
+    <!-- ======================== -->
+    <!-- PROJECTS                 -->
+    <!-- ======================== -->
+    <div class="backgroundColor" id="projectsPage">
+        <container class="gridContainerProjects body" >
+            <div class="gridItemTitle">
+                    Projects
+            </div>
+            <div class="gridItemCarousel" aria-label="Gallery">
+                <!-- Project One -->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carouselItem">
+                    <div class="projectCard">
+                        <div class="projectTitle">
+                            Kumu
+                        </div>
+                        <div class="projectImage">
+                            <img src="img/Kumu_Logo.png">
+                        </div>
+                        <div class="projectLinks">
+                            <a href="https://github.com/HACC2018/The-Bird-Squad" target="_blank"><i class="fab fa-github-square projectPadding"></i></a>
+                            <a href="https://devpost.com/software/kumu" target="_blank"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="projectDescription">
+                            Kumu is a two-part system for efficient, user-friendly data reporting and visualization for native Hawaiian plants.
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two -->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carouselItem">
+                    <div class="projectCard">
+                        <div class="projectTitle">
+                            ITS Security
+                        </div>
+                        <div class="projectImage">
+                            <img src="img/GameTheSystem_Logo.svg">
+                        </div>
+                        <div class="projectLinks">
+                            <a href="https://github.com/HACC2020/GameTheSystem" target="_blank"><i class="fab fa-github-square projectPadding"></i></a>
+                            <a href="https://devpost.com/software/gaming-the-system" target="_blank"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="projectDescription">
+                            Modern streamlined process of registering and checking in to ensure the safety of building residents.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Three -->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carouselItem">
+                    <div class="projectCard">
+                        <div class="projectTitle">
+                            HECO
+                        </div>
+                        <div class="projectImage">
+                            <img src="img/HecoReward_Logo.png">
+                        </div>
+                        <div class="projectLinks">
+                            <a href="https://github.com/HACC2019/garys-best" target="_blank"><i class="fab fa-github-square projectPadding"></i></a>
+                            <a href="https://devpost.com/software/electric-vehicle-charging-analysis-5dv7mo" target="_blank"><i class="fas fa-info-circle"></i></a>
+                        </div>
+                        <div class="projectDescription">
+                            Earning back by giving back.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrows -->
+                <label for="carousel-3" class="carousel-control prev control-1">
+                    ‹
+                </label>
+                <label for="carousel-2" class="carousel-control next control-1">›</label>
+                <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                <label for="carousel-3" class="carousel-control next control-2">›</label>
+                <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                <label for="carousel-1" class="carousel-control next control-3">›</label>
+                
+                <!-- Circle in the bottom -->
+                <ol class="carousel-indicators">
+                    <li>
+                        <label for="carousel-1" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-2" class="carousel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carousel-3" class="carousel-bullet">•</label>
+                    </li>
+                </ol>
+            </div> 
+        </container>
+    </div>
+
+    <!-- ======================== -->
+    <!-- WORK                     -->
+    <!-- ======================== -->
+    <div class="backgroundColor" id="workPage">
+        <container class="gridContainerWork body" >
+            <div class="gridItemTitle">
+                    Work
+            </div> 
+            <div class="gridItemjob" aria-label="Gallery">
+                <!-- Project One -->
+                <input class="job-open" type="radio" id="job-1" name="job" aria-hidden="true" hidden="" checked="checked">
+                <div class="jobItem">
+                    <div class="jobCard">
+                        <div class="jobTitle">
+                            LEAD SQL DEVELOPER <br> <span>@ STAR</span> 
+                            <img src="img/star_logo.svg">
+                        </div>
+                        <div class="jobDate">
+                            June 2018 - Present
+                        </div>
+                        <div class="jobDescription">
+                            <p>
+                                Managed and led the back-end team of 7 to maintain and develop an appointment website for all students and advisors at any 10 campuses of the University of Hawaiʻi System..
+                            </p>
+                            <p>
+                                Team Lead that participated in weekly meetings to discuss new features and currents bugs for STAR Balance. Distributed information to the rest of the Front-End and Back-End Team.
+                            </p>
+                            <p>
+                                Created and maintained MS Access interfaces for securities and set up scholarships, degree pathways, and reports for all 10 campuses of the University of Hawaiʻi System.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two -->
+                <input class="job-open" type="radio" id="job-2" name="job" aria-hidden="true" hidden="">
+                <div class="jobItem">
+                    <div class="jobCard">
+                        <div class="jobTitle">
+                            SOFTWARE ENGINEER INTERN <br> <span>@ DATAHOUSE</span> 
+                            <img src="img/datahouse_logo.png">
+                        </div>
+                        <div class="jobDate">
+                            December 2019 - May 2020
+                        </div>
+                        <div class="jobDescription">
+                            <p>
+                                Lead Full Stack Developer of a team of 7. Created a Kiosk Check-In app as well as making a Front-Display and Queueing system. Developed all Database, Middleware (Http connections and controllers), and the skeleton for the Front-End.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Project Three -->
+                <input class="job-open" type="radio" id="job-3" name="job" aria-hidden="true" hidden="">
+                <div class="jobItem">
+                    <div class="jobCard">
+                        <div class="jobTitle">
+                            RESEARCH ASSISTANT <br>  <span>@ University of Hawaii</span> 
+                            <img src="img/CollegeEngineering_Logo.png">
+                        </div>
+                        <div class="jobDate">
+                            August 2020 - Present
+                        </div>
+                        <div class="jobDescription">
+                            <p>
+                                Working on creating Python's Script for Autonomous Vehicle, more specific, drones. Using Ardupilot, Dronekit, and MAVLink.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Four -->
+                <input class="job-open" type="radio" id="job-4" name="job" aria-hidden="true" hidden="">
+                <div class="jobItem">
+                    <div class="jobCard">
+                        <div class="jobTitle">
+                            TEACHING ASSISTANT <br> <span>@ University of Hawaii</span> 
+                            <img src="img/CollegeEngineering_Logo.png">
+                        </div>
+                        <div class="jobDate">
+                            January 2020 - December 2020
+                        </div>
+                        <div class="jobDescription">
+                            <p>
+                                Managed and taught weekly labs for object-oriented programming in C++ and Introduction to programming in C.
+                            </p>
+                            <p>
+                                Assisted and mentored 26 students in groups and on an individual basis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- To select the first one -->
+                <label for="job-3" class="job-control prev control-1"></label>
+                <label for="job-2" class="job-control next control-3"></label>
+                <label for="job-1" class="job-control prev control-2"></label>
+                <label for="job-4" class="job-control prev control-4"></label>
+                
+                <!-- Circle in the bottom -->
+                <ol class="job-indicators">
+                    <li>
+                        <label for="job-1" class="job-bullet ">
+                            <div class="jobTitle">
+                                STAR
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="job-2" class="job-bullet">
+                            <div class="jobTitle">
+                                DATAHOUSE
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="job-3" class="job-bullet">
+                            <div class="jobTitle">
+                                RA
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="job-4" class="job-bullet">
+                            <div class="jobTitle">
+                                TA
+                            </div>
+                        </label>
+                    </li>
+                </ol>
+
+                <!-- Arrows -->
+                <label for="job-4" class="job-control prev control-1">
+                    ‹
+                </label>
+                <label for="job-2" class="job-control next control-1">›</label>
+                <label for="job-1" class="job-control prev control-2">‹</label>
+                <label for="job-3" class="job-control next control-2">›</label>
+                <label for="job-2" class="job-control prev control-3">‹</label>
+                <label for="job-4" class="job-control next control-3">›</label>
+                <label for="job-3" class="job-control prev control-4">‹</label>
+                <label for="job-1" class="job-control next control-4">›</label>
+                                
+            </div> 
+            
+        </container>
+    </div>
+    <div class="backgroundColor" id="contactMePage">
+        <container class="gridContainerContact body" >
+            <div class="gridItemTitle">
+                    Get in Touch!
+            </div> 
+            <div class="gridItemBody">
+                <div class="ItemBody">
+                    If you have any opportunities or just want to chat, feel free to send me a message!
+                </div>
+                <div class="gridItemButtons">
+                    <a href="mailto:frendy@hawaii.edu">
+                        <button class="buttonTwo">
+                            Let's Keep in Touch!
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </container>
+    </div>  
+    <footer>
+        <container>
+            <div class="leftPanel">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/frendylio/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/frendylio" target="_blank"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/users/14957079/frendy-lio-can" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+                    </li>
+                    <li>
+                        <a href="mailto:frendy@hawaii.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </li>
+                </ul>
+                Designed & Built by Frendy Lio <br>
+                frendy@hawaii.edu
+            </div>
+            <div>
+            <button onclick="location.href = '#heroPage'">
+                <a href="#heroPage">↑</a>
+            </button>
+        </div>
+        </container>        
+    </footer>
+    <script src="./js/navBar.js"></script>
+    <!-- <script src="./js/main.js"></script>
     <script src="./js/readData.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
 </body>
 </html>
 
-                        <!-- <li class="item">
-                            <input type="radio" id="radio_0" name="basic_carousel" value="0" checked="checked"/>
-                            <label class="label_Keenan" for="radio_0">
-                                Keenan
-                            </label>
-                            <div class="content content_Keenan"><span class="picto"></span>
-                                <h1>
-                                    Keenan
-                                </h1>
-                                <p>
-                                    Bottom 🍆 🍆 🍆
-                                </p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <input type="radio" id="radio_1" name="basic_carousel" value="1" />
-                            <label class="label_Willy" for="radio_1">
-                                Willy
-                            </label>
-                            <div class="content content_Willy"><span class="picto"></span>
-                                <h1>
-                                    Willy
-                                </h1>
-                                <p>
-                                    The one that I admire the most
-                                </p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <input type="radio" id="radio_2" name="basic_carousel" value="2"/>
-                            <label class="label_Spencer" for="radio_2">
-                                Spencer
-                            </label>
-                            <div class="content content_Spencer"><span class="picto"></span>
-                                <h1>
-                                    Spencer
-                                </h1>
-                                <p>
-                                    The Tesla Boi
-                                </p>
-                            </div>
-                        </li>
-
-                        <li class="item">
-                            <input type="radio" id="radio_3" name="basic_carousel" value="3"/>
-                            <label class="label_Diwen" for="radio_3">
-                                Diwen
-                            </label>
-                            <div class="content content_Diwen"><span class="picto"></span>
-                                <h1>
-                                    Diwen
-                                </h1>
-                                <p>
-                                    Chinese Guy that I hope that he keeps in touch with me after graduation.
-                                </p>
-                            </div>
-                        </li> -->

@@ -2,9 +2,10 @@
 @import "colors";
 @import "global"; //  if _ no need to type .scss save time.
 
-@import "navigationButton";
+@import "navBar";
+@import "heroPage";
 @import "aboutMe";
-@import "mediaIcons";
-@import "animation";
 @import "projects";
-@import "skills";
+@import "work";
+@import "contact";
+@import "footer";

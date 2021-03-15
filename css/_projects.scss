@@ -1,367 +1,223 @@
-// ===========
-// Horizontal navigation bar
-// ==========
-.horizontalNavigation{
-    font-size: 2rem;
-    font-weight: bold;
-    position: fixed;
-    bottom: 10vh;
-    left: 5vw;
-    opacity:0;
-    visibility: hidden;
-    transition: all 1s ease-in-out;
+  .gridContainerProjects{
+    padding-left: 16.8vw;
+    padding-right: 16.8vw;
+    padding-top: 13.28vh;
+    padding-bottom: 4.2vh;
+    flex-direction: column;
+    display: flex;	
+    align-items: center;
+    @media screen and (max-width: 800px){	
+        padding-left: 1.5vw;	
+        padding-right: 1.5vw;	
+        padding-top: 5.25vh;	
+        align-items: center;
 
-    @media screen and (max-width: 1280px){
-        font-size: 1rem;
+    }  
+
+    .gridItemTitle{
+        font-family: $font-Georgia;
+        font-weight: bold;
+        font-size: 3.5rem;
+        color: $gray;
+        padding-bottom: min(3vh, 30px);
+
+        @media screen and (max-width: 800px){	
+            color: $blue;	
+            font-family: $font-Arial;	
+            font-size: 0.875rem;	
+        }         
     }
 
+    .gridItemCarousel{
 
-    &.open{
-        opacity: 1;
-        visibility: visible;
-    }
+        height: 50vh;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
 
-    // Icons
-    display: inline-block;
-    ul{
-        padding: 0;
-        cursor: pointer;
-    
-        li{
-            margin: 10vh;
-            
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            display:block;
-        }   
-        
-        i{
-            padding-top: 1vh;
-            margin-right: 0.5vw;
-            transition: all 0.75s ease-in-out;
-                                
-            &:hover{
-                color: green;
-                animation: bounce 0.75s infinite; 
-            }      
-    
+        @media screen and (max-width: 800px) and (max-height: 900px){	
+            height: 90vh;	
+            max-height: 80vh;
         }  
 
-    }     
-}
-
-// ===========
-// Carousel 
-// ==========
-
-// https://codepen.io/pascaloliv/pen/LVZaeE
-
-// ================
-// Variables
-// ================
-
-// Default Values for projects window
-$menu-width: 25vw;
-$scene-width: 75vw;
-$scene-height: 50vh;
-
-// Sections
-$sections: 
-  GameTheSystem, 
-  HECO, 
-  Kumu;
-
-// Images
-$pictograms: (
-    GameTheSystem: url("../img/GameTheSystem_Logo.svg"),
-    HECO: url('../img/HecoReward_Logo.png'),
-    Kumu: url('../img/Kumu_Logo.png')
-);
-
-// Function to get correct images
-@function get-picto-url($picto-name) {
-  @if map-has-key($pictograms, $picto-name) {
-    @return map-get($pictograms, $picto-name);
-  }
- 
-  @else {
-    @warn "This pictogram key doesn't exist."
-  }
-};
+        @media screen and (min-width: 800px) and (max-width:1024px) and (min-height: 1000px){	
+            height: 35vh;
+        } 
 
 
-//================
-// Start of CSS
-// 1280 < should go to mid
-//================ 
-#scene {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    
-    width: $scene-width;
-    height: $scene-height;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: $white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12),
-                0 1px 2px rgba(0,0,0,0.24);
-    overflow: hidden;
 
-    @media screen and (max-width: 1280px){
-        flex-direction: column;
-        height: $scene-height*1.50;
-    }
+        // =================
+        // Card
+        // =================
+        .carouselItem{
+            position: absolute;
+            opacity: 0;
+            transition: all 1s;
+            height: 98%;
+            width: 98%;
 
-    #left-zone {
+            font-family: $font-Arial;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            color: $blue;
+            text-align: center;
 
-        @media screen and (max-width: 1280px){
-            order: 3;
-            height: 35%;
-            width: 55%;
+            .projectCard{
+                background: $white;
+                height: inherit;
+                text-align: center;
+
+                border-radius: 10px;
+                box-shadow: 10px 10px 5px #ccc;
+
+                @media screen and (max-width: 800px){	
+                    box-shadow: 5px 5px 2.5px #ccc;	
+                }  
+
+                .projectTitle{
+                    padding-top: 5vh;
+                    font-weight: bold;
+                    font-size: 2rem;
+
+                    @media screen and (max-width: 800px){	
+                        padding-top: 10vh;
+                    }  
+
+                    @media screen and (min-width: 800px) and (max-width:1024px) and (min-height: 1000px){	
+                        padding-top: 2vh;
+                    }    
+                }
+
+                .projectImage{
+                    margin-top: 4vh;
+
+                    img{
+                        height: 10vh;
+                        width: 10vh;
+                    }    
+                }
+
+                .projectDescription{
+                    width: 50%;
+                    margin: auto;
+                    margin-top: 2vh;
+                    line-height: 1.5rem;
+                    color: $black;
+
+                    
+                    @media screen and (min-width: 800px) and (max-width:1024px) and (min-height: 1000px){	
+                        width: 75%;
+                    }    
+                }
+
+                .projectLinks{
+                    margin-top: 2vh;
+                    font-size: 2rem;
+
+                    .projectPadding{
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+
+        // =================
+        // Arrow
+        // =================        
+        .carousel-open:checked + .carouselItem {
+            transition: all 1s;
+
+            opacity: 100;
+          }
+
+        .carousel-control {
+            background: transparent;
+            border-radius: 50%;
+            color: $blue;
+
+            position: absolute;
+            z-index: 0;
+
+            font-size: 2.5vw;
+            width: 2.5vw;
+            height: 2.5vw;
+            align-items: center;
+            vertical-align: middle;
+            text-align: center;
+
+            top: 40%;
+            line-height: 2.3vw;
+            cursor: pointer;
+
+            display: none;
+
+            @media screen and (max-width: 800px){	
+                font-size: 10vw;
+            }  
+
+            &:hover{
+                background-color: $blue;
+                color: $white;
+
+                @media screen and (max-width: 800px){	
+                    background-color: none;
+                    color: $blue;
+                }
+            }
+        }
+          
+        .carousel-control.prev {
+            left: 2%;
+        }
+          
+        .carousel-control.next {
+            right: 5%;
         }
     
-        background: $white;
-        height: 75%;
-        flex-grow: 0;
-        display: flex;
-        width: $menu-width;
-        align-items: center;
-        justify-content: left;
-            
-        .list{
-            display: flex;
+
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3 {
+            display: block;
+        }
+    
+        // ==============
+        // Circle
+        // ===============
+        .carousel-indicators {
             list-style: none;
-            
-            align-content: stretch;
-            flex-direction: column;
-            flex-grow: 1;
-            
             margin: 0;
-            padding: 0;     
-
-            @media screen and (max-width: 1280px){
-                flex-direction: row;
-            }
-            
-            li.item {
-                @media screen and (max-width: 1280px){
-                    width: 15vw;
-                }
-                input[type="radio"] {
-                    
-                    display: none;
-
-                    // ============
-                    // Start of label
-                    // ============
-                    & ~ label {
-                        
-                        display: block;
-                        opacity: 0.5;
-                        height: 3rem;
-                        text-align: center;
-                        line-height: 3rem;
-                        
-                        &:first-letter {
-                            text-transform: uppercase;
-                        }
-                                    
-                        &:hover {
-                            opacity: 0.75;
-                            cursor: pointer;
-                        }
-                    
-                        // ===========
-                        // This is for the images
-                        // ===========
-                        @each $item in $sections{
-                            &.label_#{$item} {
-                                &:before {
-                                    content: " ";
-                                    display: block;
-                                    position: absolute;
-                                    width: 3rem;
-                                    height: 3rem;
-                                    margin-left: 3vw;
-                                    background-image: get-picto-url($item);
-                                    background-position: center;
-                                    background-size: 75% 75%;
-                                    background-repeat: no-repeat;
-
-                                    @media screen and (max-width: 1280px){
-                                        margin-left: 0vw;
-                                    }
-                                }
-
-
-                            }
-                        }
-                        
-                        
-                        @media screen and (max-width: 1280px){
-                            font-size: 0;
-                        }
-                    }
-                        
-                    // ============
-                    // Start of right size content
-                    // ============
-                    & ~ .content {
-                        position: absolute;
-                        left: $menu-width;
-                        top: -$scene-height;
-                        width: $scene-width - $menu-width;
-                        height: $scene-height;
-                        
-                        animation-duration: 0.75s;
-                        animation-name: slideout;
-                        animation-timing-function: ease-out;
-                        
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
-
-                        @media screen and (max-width: 1280px){
-                            left: 13vw;
-                            font-size: 0.9rem;
-                            height: 75%;
-                            top: 100%;
-                            animation-name: slideoutMobile;
-                        }       
-
-                        //============
-                        // For images
-                        //============
-                        @each $item in $sections{
- 
-                            &.content_#{$item} {
-
-                                
-                                .picto {
-                                    height: 5rem;
-                                    width: 5rem;
-                                    background-image: get-picto-url($item);
-                                    background-position: center;
-                                    background-size: cover;
-                                    background-repeat: no-repeat;
-
-                                    @media screen and (max-width: 1280px){
-                                        height: 2.5rem;
-                                        width: 2.5rem;                               
-                                    }                                           
-                                }
-                            
-                                h1{
-                                    color: $red;
-                                }
-                            }
-                        }
-                        
-                        h1 {
-                            &:first-letter {
-                                text-transform: uppercase;
-                            }
-                        }
-                        p {
-                            max-width: 50%;
-                            text-align: center;      
-
-                            @media screen and (max-width: 1280px){
-                                max-width: 100%;
-                            }       
+            padding: 0;
+            position: absolute;
+            bottom: 10%;
+            right: 0;
+            left: -3.5%;
+            text-align: center;
+            z-index: 10;
+          }
+          
+          .carousel-indicators li {
+            display: inline-block;
+            margin: 0 5px;
+          }
+          
+          .carousel-bullet {
+            color: $cyan;
+            cursor: pointer;
+            display: block;
+            font-size: 35px;
+          }
+          
+          .carousel-bullet:hover {
+            color: $blue;
+          }
+          
+          #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+          #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+          #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: $blue;
+          }
     
-
-                            a{
-                                text-decoration: none;
-                                color: $green;
-                                font-family: $font-Ubuntu;
-                                font-size: 2rem;
-                                padding: 1vh;
-                            }
-                        }
-                    }
-                    
-                    //==========
-                    // When project is chosen
-                    //===========
-                    &:checked{
-                        
-                        & ~ label {
-                            opacity: 1;
-                            animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-                            
-                            @each $item in $sections{
-                                &.label_#{$item} {
-                                    color: $red;
-                                    border-left: solid 0.2rem $red;
-                                    padding-left: 0.5vw;
-                                
-                                    @media screen and (max-width: 1280px){
-                                        border-left: 0rem;
-                                        border-bottom: solid 0.2rem $red;
-                                        padding-left: 0;
-                                        width: 3rem;
-                                        font-size: 0;
-                                    }
-
-                                }
-                            }
-
-                        }
-
-                        & ~ .content {
-                            animation-duration: 0.75s;
-                            animation-name: slidein;
-                            animation-fill-mode: forwards;
-                            animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-                            
-                            @media screen and (max-width: 1280px){
-                                left: 13vw;
-                                font-size: 0.9rem;
-                                height: 75%;
-                                top: 100%;
-                                animation-name: slideinMobile;
-                            } 
-                        }
-                    }
-                }
-            }
-        }
     }
-    
-    #middle-border {
-        background-color: $gray;
-        height: 75%;
-        flex-grow: 1;
-        max-width: 0.2rem;
-        z-index: 0;
 
-        @media screen and (max-width: 1280px){
-            order: 2;
-            max-width: 95%;
-            width: 100%;
-            height: 0.2rem;
-        }
-    }
-    
-    #right-zone {
-        background: $white;
-        height: 100%;
-        flex-grow: 3;
-
-        @media screen and (max-width: 1280px){
-            order: 1;
-        }        
-    }
 }
-
-
