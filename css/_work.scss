@@ -139,6 +139,12 @@
                         line-height: 1.3rem;
                     }  
 
+                    @media screen and (max-height: 600px){	
+                        padding-top: 1vh;
+                        line-height: 1rem;
+                        font-size: 1rem;
+                    }
+
                 }
             }
         }

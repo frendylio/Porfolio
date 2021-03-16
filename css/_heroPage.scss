@@ -7,11 +7,17 @@
         padding: 0;
         margin: 0;
 
-        padding-top: 17.84vh;
+        padding-top: 27vh;
         font-family: $font-Georgia;
         font-size: 3.5rem;
         font-weight: bold;
         color: $gray;
+
+        @media screen and (min-height: 1080px){
+            padding-top: 30vh;
+            font-size: 3.125rem;
+            font-size: 5rem;
+        }
 
         @media screen and (max-width: 1024px){
             padding-top: 15vh;

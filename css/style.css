@@ -354,11 +354,19 @@ navMobile hamburger.open span::after {
 .gridContainer .gridItemName {
   padding: 0;
   margin: 0;
-  padding-top: 17.84vh;
+  padding-top: 27vh;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 3.5rem;
   font-weight: bold;
   color: #7f7f7f;
+}
+
+@media screen and (min-height: 1080px) {
+  .gridContainer .gridItemName {
+    padding-top: 30vh;
+    font-size: 3.125rem;
+    font-size: 5rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1016,6 +1024,14 @@ navMobile hamburger.open span::after {
   }
 }
 
+@media screen and (max-height: 600px) {
+  .gridContainerWork .gridItemjob .jobItem .jobCard .jobDescription {
+    padding-top: 1vh;
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+}
+
 .gridContainerWork .gridItemjob .job-open:checked + .jobItem {
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -1254,10 +1270,8 @@ navMobile hamburger.open span::after {
 footer {
   background-color: #2699fb;
   width: 100%;
-  min-height: 80px;
-  height: 9.11vh;
-  max-height: 80px;
-  margin-top: -9.11vh;
+  height: 80px;
+  margin-top: -80px;
   position: relative;
 }
 
@@ -1288,11 +1302,14 @@ footer .leftPanel {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 7.32vw;
+  vertical-align: middle;
+  padding-top: 20px;
 }
 
 @media screen and (max-width: 800px) {
   footer .leftPanel {
     margin-left: 0;
+    padding-top: 0px;
   }
 }
 
@@ -1303,6 +1320,7 @@ footer .leftPanel ul {
 @media screen and (min-width: 800px) {
   footer .leftPanel ul {
     visibility: hidden;
+    font-size: 0rem;
   }
 }
 

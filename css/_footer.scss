@@ -3,11 +3,8 @@ footer{
 
     background-color: $blue;
     width:  100%;
-    min-height: 80px;
-    height: 9.11vh;
-    
-    max-height: 80px;
-    margin-top: -9.11vh;
+    height: 80px;
+    margin-top: -80px;
     position: relative;
     
     // Media queries for pc
@@ -33,15 +30,19 @@ footer{
         margin: auto;
         align-items: center;
         margin-left: 7.32vw;
-
+        vertical-align: middle;
+        padding-top: 20px;
         @media screen and (max-width: 800px){
             margin-left: 0;
+            padding-top: 0px;
         }
+
 
         ul{
                 // Media queries for pc
             @media screen and (min-width: 800px){
                 visibility: hidden;
+                font-size: 0rem;
             }
             
             font-size: 1.2rem;

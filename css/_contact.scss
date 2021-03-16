@@ -13,6 +13,7 @@
     flex-direction: column;
     display: flex;	
     align-items: center;
+    
     @media screen and (max-width: 800px){	
         padding-left: 1.5vw;	
         padding-right: 1.5vw;	
@@ -55,8 +56,6 @@
             width: 75vw;
             font-size: 1.5rem;
         } 
-
-        
 
         text-align: center;
 
