@@ -45,6 +45,10 @@
         } 
 
 
+        @media screen and (orientation:landscape) and (max-width: 1024px){
+            height: 150vh;
+            max-height: 150vh;
+        }
 
         // =================
         // Card

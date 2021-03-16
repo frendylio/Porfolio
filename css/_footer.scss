@@ -16,6 +16,12 @@ footer{
         margin-top: -20vh;
         max-height: none;
     }
+
+
+    @media screen and (orientation:landscape) and (max-width: 1024px) {
+        height: 30vh;
+    }
+
     .leftPanel{
         text-align: center;
         font-family: $font-Segoe;

@@ -22,6 +22,20 @@ body .backgroundColor {
   height: 100vh;
 }
 
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  body .backgroundColor {
+    height: 175vh;
+    max-height: 175vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 300px) {
+  body .backgroundColor {
+    height: 225vh;
+    max-height: 225vh;
+  }
+}
+
 body .backgroundColor:nth-of-type(odd) {
   background-color: #f1f9ff;
 }
@@ -281,6 +295,13 @@ navMobile hamburger span::before {
   transition: all 1s;
 }
 
+@media screen and (orientation: landscape) {
+  navMobile hamburger span::before {
+    -webkit-transform: translateY(1.5vh);
+            transform: translateY(1.5vh);
+  }
+}
+
 navMobile hamburger span::after {
   content: "";
   display: block;
@@ -291,6 +312,13 @@ navMobile hamburger span::after {
   background-color: #2699fb;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+@media screen and (orientation: landscape) {
+  navMobile hamburger span::after {
+    -webkit-transform: translateY(3vh);
+            transform: translateY(3vh);
+  }
 }
 
 navMobile hamburger.open span {
@@ -643,6 +671,13 @@ navMobile hamburger.open span::after {
   }
 }
 
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  .gridContainerProjects .gridItemCarousel {
+    height: 150vh;
+    max-height: 150vh;
+  }
+}
+
 .gridContainerProjects .gridItemCarousel .carouselItem {
   position: absolute;
   opacity: 0;
@@ -873,6 +908,20 @@ navMobile hamburger.open span::after {
   }
 }
 
+@media screen and (orientation: landscape) {
+  .gridContainerWork .gridItemjob {
+    height: 150vh;
+    max-height: 150vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 300px) {
+  .gridContainerWork .gridItemjob {
+    height: 175vh;
+    max-height: 175vh;
+  }
+}
+
 .gridContainerWork .gridItemjob .jobItem {
   position: absolute;
   opacity: 0;
@@ -1034,6 +1083,7 @@ navMobile hamburger.open span::after {
 
 .gridContainerWork .gridItemjob .job-indicators {
   position: absolute;
+  width: 100%;
   z-index: 10;
   padding: 0;
 }
@@ -1041,7 +1091,7 @@ navMobile hamburger.open span::after {
 @media screen and (max-width: 800px) {
   .gridContainerWork .gridItemjob .job-indicators {
     margin: auto;
-    padding-left: 12.5%;
+    text-align: center;
   }
 }
 
@@ -1216,6 +1266,12 @@ footer {
     height: 20vh;
     margin-top: -20vh;
     max-height: none;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+  footer {
+    height: 30vh;
   }
 }
 

@@ -170,6 +170,7 @@ navMobile{
         margin-left: 4.53vw;
         cursor: pointer;
 
+
         span{
             width: inherit;
             height: 0.3vh;
@@ -184,6 +185,11 @@ navMobile{
                 transform: translateY(0.75vh);
                 background-color: $blue;
                 transition: all 1s;
+
+                @media screen and (orientation:landscape) {
+                    transform: translateY(1.5vh);
+                }
+
             }
 
             &::after{
@@ -194,6 +200,11 @@ navMobile{
                 transform: translateY(1.25vh);
                 background-color: $blue;
                 transition: all 1s;
+
+                @media screen and (orientation:landscape) {
+                    transform: translateY(3vh);
+                }
+
             }
         }
 

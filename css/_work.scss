@@ -45,6 +45,17 @@
             max-height: 80vh;
         }  
 
+
+        @media screen and (orientation:landscape) {
+            height: 150vh;
+            max-height: 150vh;
+        }
+
+        @media screen and (orientation:landscape) and (max-height: 300px){
+            height: 175vh;
+            max-height: 175vh;
+        }
+
         // =================
         // Card
         // =================
@@ -205,14 +216,14 @@
         .job-indicators {
 
             position: absolute;
-
+            width: 100%;
 
             z-index: 10;
             padding: 0;
 
             @media screen and (max-width: 800px){	
                 margin: auto;
-                padding-left: 12.5%;
+                text-align: center;
             }
 
             li{
