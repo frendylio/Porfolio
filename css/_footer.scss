@@ -2,11 +2,11 @@ footer{
 
 
     background-color: $blue;
-    width:100%;
-    min-height: 70px;
+    width:  100%;
+    min-height: 80px;
     height: 9.11vh;
     
-    max-height: inherit;
+    max-height: 80px;
     margin-top: -9.11vh;
     position: relative;
     
@@ -28,14 +28,16 @@ footer{
         color: $white;
         font-size: 0.8rem;
         margin-top: -3.5vh;
-        width: 100vh;
-        margin-left: 5vw;
-        // Media queries for pc
+        width: 100%;
+        height: 70px;
+        margin: auto;
+        align-items: center;
+        margin-left: 7.32vw;
+
         @media screen and (max-width: 800px){
-            margin-top: 3.1vh;
+            margin-left: 0;
         }
 
-        width: 100%;
         ul{
                 // Media queries for pc
             @media screen and (min-width: 800px){
@@ -43,38 +45,44 @@ footer{
             }
             
             font-size: 1.2rem;
-            padding: 1vh;
 
-            li{
-                padding: 1vh;
-            }
+
         }
     }
 
-    button{
+    .footerArrow{
+
         // Media queries for pc
         @media screen and (max-width: 800px){
             visibility: hidden;
+            width: 0;
         }
-        
-        background-color: $light-blue;
-        width: 7.32vw;
-        height: 100%;
+        height: 80px;
 
-        border: none;
-        color: white;
-        font-size: 2rem;
-        right: 10%;
-        cursor: pointer;
-        max-height: inherit;
+        button{
 
-        &:focus, &:active{
-            outline: none;
-        }
+            
+            background-color: $light-blue;
+            width: 7.32vw;
+            height: 100%;
 
-        &:hover{
-            background-color: $cyan;
-            color: $blue;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            right: 10%;
+            cursor: pointer;
+            max-height: inherit;
+            margin: auto;
+
+            &:focus, &:active{
+                outline: none;
+            }
+
+            &:hover{
+                background-color: $cyan;
+                color: $blue;
+            }
         }
     }
 }
+
