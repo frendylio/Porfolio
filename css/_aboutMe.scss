@@ -66,6 +66,13 @@
 
                 object-fit: cover;
                 box-shadow: 10px 10px 5px #ccc;
+
+                transition: 0.5s all ease-in-out;
+                &:hover{
+                    transform: translateY(-5px);
+                    box-shadow: 10px 10px 5px $light-blue;
+                }
+
                  
             }
         }

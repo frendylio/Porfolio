@@ -1,0 +1,10 @@
+// https://stackoverflow.com/questions/47195391/sass-compare-vh-and-px-with-min-function
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
+
+// https://stackoverflow.com/questions/47195391/sass-compare-vh-and-px-with-min-function
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers})
+
+}

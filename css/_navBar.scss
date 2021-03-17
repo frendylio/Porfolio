@@ -16,6 +16,7 @@ navWebsite{
 
     .leftPanel{
         width: 100%;
+
         ul{
             height: inherit;
 
@@ -25,6 +26,11 @@ navWebsite{
                 font-size: 0.8rem;
                 margin-left: 3.66vw;
                 margin-top: 3.66vh;
+                transition: 0.5s all ease-in-out;
+
+                &:hover{
+                    transform: translateY(-5px);
+                }
             }   
         }
     
@@ -43,6 +49,11 @@ navWebsite{
                 font-size: 1rem;
                 margin-right: 2.34vw;
                 margin-top: 3.52vh;
+
+                transition: 0.5s all ease-in-out;
+                &:hover{
+                    transform: translateY(-5px);
+                }
             }   
         }
     
@@ -54,6 +65,7 @@ navWebsite{
         margin-top: 2.6vh;
         margin-left: 2.49vw;
         max-width: none;
+
     } 
 }
 

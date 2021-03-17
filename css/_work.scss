@@ -1,8 +1,3 @@
-// https://stackoverflow.com/questions/47195391/sass-compare-vh-and-px-with-min-function
-@function min($numbers...) {
-    @return m#{i}n(#{$numbers});
-}
-
 .gridContainerWork{
     padding-left: 16.8vw;
     padding-right: 16.8vw;
@@ -245,11 +240,11 @@
     
                 
                 border-left: 0.5rem solid;
-    
                 cursor: pointer;
                 display: block;
                 font-size: 1.25rem;
                 height: 7.5vh;
+                width: 20%;
             
                 @media screen and (max-width: 800px){	
                     font-size: 0rem;
