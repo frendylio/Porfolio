@@ -15,11 +15,17 @@ body{
     overflow: auto;
 
     .backgroundColor{
-        max-height: 768px;
+        max-height: 100vh;
         height: 100vh;
 
-        @media screen and (orientation: landscape) {
-            height: 568px;
+        @media screen and (orientation:landscape) and (max-width: 1024px){
+            height: 175vh;
+            max-height: 175vh;
+        }
+
+        @media screen and (orientation:landscape) and (max-height: 300px){
+            height: 225vh;
+            max-height: 225vh;
         }
 
         &:nth-of-type(odd) {
@@ -31,7 +37,7 @@ body{
         }
 
         &#contactMePage{
-            max-height: 100%;
+            overflow: hidden;
         }
     }   
 }
@@ -42,18 +48,13 @@ container{
     display: flex;
     height: inherit;
     
-    @media screen and (max-width: 800px) {
-        max-width: 300px;
+    @media screen and (max-width: 800px) and (max-height: 900px) {
+        max-width: 302px;
     }
 
-    @media screen and (max-width: 320px) {
-        max-width: 250px;
+    @media screen and (max-width: 800px) and (min-height: 900px) {
+        max-width: 600px;
     }
-
-    @media screen and (max-width: 280px) {
-        max-width: 200px;
-    }
-
 
     &.body{
         transform: translateX(0);

@@ -6,79 +6,67 @@ navWebsite{
 
     background-color: $blue;
     width:100%;
-
-    height: 80px;
+    min-height: 70px;
+    height: 9.11vh;
+    max-height: 80px;
     
     position: fixed;
     top: 0px;
     z-index: 20;
 
-    .navigationGrid{
-    
-        display: grid;
-        grid-template-columns: 1fr 4fr  3fr;
-        height: inherit;
+    .leftPanel{
         width: 100%;
 
-    // Media queries for pc
-        @media screen and (min-width: 900px) and (max-width: 1000px){
-            grid-template-columns: 1fr 5fr 3fr 3fr;
+        ul{
+            height: inherit;
+
+            li{
+                font-family: $font-Arial;
+                color: $white;
+                font-size: 0.8rem;
+                margin-left: 3.66vw;
+                margin-top: 3.66vh;
+                transition: 0.5s all ease-in-out;
+
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }   
         }
-
-        .leftPanel{
-            display: flex;
-            align-items: center;
-            max-height: 80px;
-
-            ul{
-                max-height: 80px;
-                li{
-                    font-family: $font-Arial;
-                    color: $white;
-                    font-size: 0.8rem;
-                    transition: 0.5s all ease-in-out;
-                    padding: min(25.948px,1vw);
-                    &:hover{
-                        transform: translateY(-5px);
-                    }
-                }   
-            }
-
-        }
-
-        .rightPanel{
-            display: flex;
-            align-items: center;
-            max-height: 80px;
-            justify-content: flex-end;
-            padding-right: 20px;
-            ul{
-                
-                li{
-                    font-family: $font-Arial;
-                    color: $white;
-                    font-size: 1rem;
-                    padding: min(14.400px,0.75vw);
-                    
-                    transition: 0.5s all ease-in-out;
-                    &:hover{
-                        transform: translateY(-5px);
-                    }
-                }   
-            }
-
-        }
-
-        .navigationImage{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                height: 28px;
-                width: 31px;
-            } 
-        }
+    
     }
+
+    .rightPanel{
+        text-align: right;
+        width: 100%;
+        ul{
+
+            height: inherit;
+
+            li{
+                font-family: $font-Arial;
+                color: $white;
+                font-size: 1rem;
+                margin-right: 2.34vw;
+                margin-top: 3.52vh;
+
+                transition: 0.5s all ease-in-out;
+                &:hover{
+                    transform: translateY(-5px);
+                }
+            }   
+        }
+    
+    }
+
+    img{
+        height: 28px;
+        width: 31px;
+        margin-top: 2.6vh;
+        margin-left: 2.49vw;
+        max-width: none;
+
+    } 
 }
 
 navMobile{
@@ -86,26 +74,22 @@ navMobile{
     @media screen and (min-width: 800px){
         visibility: hidden;
     }
-    
 
     width:78.9vw;
-    height: max(568px,100vh);
+    height: 100vh;
     position: fixed;
-    max-height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 21;
+
     &.open{
         z-index: 20;
-        overflow:scroll;
     }
-    
     .gridNavContainer{
         flex-direction: column;
         display: flex;
         margin: 0;
         padding: 0;
-        min-height: 568px;
+
         transform: translateX(-100vw);
         transition: all 1s;
 
@@ -114,7 +98,7 @@ navMobile{
         }
 
         .topPart{
-            height: max(84.141px,17.39vh);
+            height: 17.39vh;
             width: 100%;
             background-color: $blue;
             font-family: $font-Arial;
@@ -122,84 +106,68 @@ navMobile{
             font-weight: bold;
             color: white;
             
-
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-direction: row;
-
+            .navTitle{
+                position: fixed;
+                margin-top: 5.62vh;
+                margin-left: 20.6vw;
+            }
 
             img{
                 height: 28px;
                 width: 31px;
                 max-width: none;
-                margin-right: 30px;
-                margin-left: 30px;
-
+                margin-top: 4.5vh;
+                margin-left: 7.2vw;
+                position: fixed;
             } 
         }
 
         .bottomPart{
             height: 100%;
-            width: inherit;
+            width: 100%;
             background-color: $light-blue;    
             font-family: $font-Arial;
             color: white;
 
-            display: flex;
-
-            flex-direction: column;
-
             .bottomPartOne{
-                width: inherit;
-
-                div{
-                    border-bottom: rgba($color: $blue, $alpha: 0.2) 0.1rem solid ;
-                    height: max(52.922px,9.6vh);
+                ul{
                     
                     font-size: 0.625rem;
                     font-weight: bold;
-                    display: flex;
-                    align-items: center;
 
-                    i{
-                        font-size: 1rem;
-                        padding-left: 30px;
-                        width: 40px
+                    li{
+                        display: block;
+                        height: 9.6vh;
+                        border-bottom: rgba($color: $blue, $alpha: 0.2) 0.1rem solid ;
+                        
+                        i{
+                            font-size: 1rem;
+                            padding-top: 2.7vh;
+                            padding-left: 7.2vw;
+                            padding-right: 5.2vw;
+                            max-width: 16vw;
+                            align-items: left;
+                        }
                     }
-
-                    a{
-                        padding-left: 30px;
-                    }
-                  
                 }
             }
 
             .bottomPartTwo{
+                margin-top: 27.13vh;
                 text-align: center;
                 font-family: $font-Segoe;
-                display: flex;
-                height: inherit;
-                width: inherit;
-                justify-content: flex-end;
-                flex-direction: column;
-
-                div{
-                    
                 
-                    ul{
-                        li{
-                            padding: 10px;
-                        }
+                ul{
+                    li{
+                        padding-right: 2.92vw;
+                        padding-left: 2.92vw;
                     }
+                }
 
-                    .textEnding{
-                        width: 75%;
-                        margin: auto;
-                        font-size: 1rem;
-                        line-height: 1.25rem;
-                        margin-bottom: 35px;
-                    }
+                .textEnding{
+                    margin-top: 4.04vh;
+                    font-size: 1rem;
+                    line-height: 1.25rem;
                 }
             }
         }

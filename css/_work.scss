@@ -1,11 +1,11 @@
 .gridContainerWork{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 768px;
+    padding-left: 16.8vw;
+    padding-right: 16.8vw;
+    padding-top: 13.28vh;
+    padding-bottom: 4.2vh;
     flex-direction: column;
-
-
+    display: flex;	
+    align-items: center;
     @media screen and (max-width: 800px){	
         padding-left: 1.5vw;	
         padding-right: 1.5vw;	
@@ -31,26 +31,25 @@
     .gridItemjob{
 
         height: 50vh;
-        max-height: 484.5px;
         position: relative;
         overflow: hidden;
-        width: 50%;
+        width: 100%;
 
-        // @media screen and (max-width: 800px){	
-        //     height: 90vh;	
-        //     max-height: 80vh;
-        // }  
+        @media screen and (max-width: 800px){	
+            height: 90vh;	
+            max-height: 80vh;
+        }  
 
 
-        // @media screen and (orientation:landscape) {
-        //     height: 150vh;
-        //     max-height: 150vh;
-        // }
+        @media screen and (orientation:landscape) {
+            height: 150vh;
+            max-height: 150vh;
+        }
 
-        // @media screen and (orientation:landscape) and (max-height: 300px){
-        //     height: 175vh;
-        //     max-height: 175vh;
-        // }
+        @media screen and (orientation:landscape) and (max-height: 300px){
+            height: 175vh;
+            max-height: 175vh;
+        }
 
         // =================
         // Card
@@ -86,7 +85,7 @@
 
                     font-weight: bold;
                     font-size: 1.875rem;
-                    padding-bottom: min(9.69px,1vh);
+                    padding-bottom: 1vh;
                     border-bottom: 0.2rem solid $light-blue;
                     line-height: 2rem;
 
@@ -100,7 +99,7 @@
                     img{
                         width: 30px;
                         height: 30px;
-                        margin-top: min(9.69px,1vh);
+                        margin-top: 1vh;
                         @media screen and (max-width: 800px){	
                             margin-top: 0vh;
                         }  
@@ -113,13 +112,13 @@
                 }
 
                 .jobDate{
-                    padding-top: min(9.69px,1vh);
-                    padding-bottom: min(9.69px,1vh);
+                    padding-top: 1vh;
+                    padding-bottom: 1vh;
 
                 }
 
                 .jobDescription{
-                    padding-top: min(19.380px,2vh);
+                    padding-top: 2vh;
                     line-height: 1.5rem;
                     p{
                         padding-bottom: 1rem;
@@ -173,15 +172,15 @@
             position: absolute;
             z-index: 0;
 
-            font-size: min(48px,2.5vw);
-            width: min(48px,2.5vw);
-            height:min(48px,2.5vw);
+            font-size: 2.5vw;
+            width: 2.5vw;
+            height: 2.5vw;
             align-items: center;
             vertical-align: middle;
             text-align: center;
 
             top: 95%;
-            line-height: min(44.16px,2.5vw);
+            line-height: 2.3vw;
             cursor: pointer;
 
             display: none;
@@ -244,7 +243,7 @@
                 cursor: pointer;
                 display: block;
                 font-size: 1.25rem;
-                height: min(72.675px,7.5vh);
+                height: 7.5vh;
                 width: 20%;
             
                 @media screen and (max-width: 800px){	
@@ -260,8 +259,8 @@
                 }
 
                 .jobTitle{
-                    padding-left: min(19.2px,1vw);
-                    padding-top: min(2.5vh, 25px);
+                    padding-left: 1vw;
+                    padding-top: 2.5vh;
                 }
             }
         }

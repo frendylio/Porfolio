@@ -18,13 +18,21 @@ body {
 }
 
 body .backgroundColor {
-  max-height: 768px;
+  max-height: 100vh;
   height: 100vh;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 1024px) {
   body .backgroundColor {
-    height: 568px;
+    height: 175vh;
+    max-height: 175vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 300px) {
+  body .backgroundColor {
+    height: 225vh;
+    max-height: 225vh;
   }
 }
 
@@ -37,7 +45,7 @@ body .backgroundColor:nth-of-type(even) {
 }
 
 body .backgroundColor#contactMePage {
-  max-height: 100%;
+  overflow: hidden;
 }
 
 container {
@@ -49,21 +57,15 @@ container {
   height: inherit;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (max-height: 900px) {
   container {
-    max-width: 300px;
+    max-width: 302px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 800px) and (min-height: 900px) {
   container {
-    max-width: 250px;
-  }
-}
-
-@media screen and (max-width: 280px) {
-  container {
-    max-width: 200px;
+    max-width: 600px;
   }
 }
 
@@ -98,7 +100,9 @@ a {
 navWebsite {
   background-color: #2699fb;
   width: 100%;
-  height: 80px;
+  min-height: 70px;
+  height: 9.11vh;
+  max-height: 80px;
   position: fixed;
   top: 0px;
   z-index: 20;
@@ -110,103 +114,67 @@ navWebsite {
   }
 }
 
-navWebsite .navigationGrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 4fr  3fr;
-      grid-template-columns: 1fr 4fr  3fr;
-  height: inherit;
+navWebsite .leftPanel {
   width: 100%;
 }
 
-@media screen and (min-width: 900px) and (max-width: 1000px) {
-  navWebsite .navigationGrid {
-    -ms-grid-columns: 1fr 5fr 3fr 3fr;
-        grid-template-columns: 1fr 5fr 3fr 3fr;
-  }
+navWebsite .leftPanel ul {
+  height: inherit;
 }
 
-navWebsite .navigationGrid .leftPanel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 80px;
-}
-
-navWebsite .navigationGrid .leftPanel ul {
-  max-height: 80px;
-}
-
-navWebsite .navigationGrid .leftPanel ul li {
+navWebsite .leftPanel ul li {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #ffffff;
   font-size: 0.8rem;
+  margin-left: 3.66vw;
+  margin-top: 3.66vh;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
-  padding: min(25.948px, 1vw);
 }
 
-navWebsite .navigationGrid .leftPanel ul li:hover {
+navWebsite .leftPanel ul li:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-navWebsite .navigationGrid .rightPanel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 80px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 20px;
+navWebsite .rightPanel {
+  text-align: right;
+  width: 100%;
 }
 
-navWebsite .navigationGrid .rightPanel ul li {
+navWebsite .rightPanel ul {
+  height: inherit;
+}
+
+navWebsite .rightPanel ul li {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: #ffffff;
   font-size: 1rem;
-  padding: min(14.4px, 0.75vw);
+  margin-right: 2.34vw;
+  margin-top: 3.52vh;
   -webkit-transition: 0.5s all ease-in-out;
   transition: 0.5s all ease-in-out;
 }
 
-navWebsite .navigationGrid .rightPanel ul li:hover {
+navWebsite .rightPanel ul li:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-navWebsite .navigationGrid .navigationImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-navWebsite .navigationGrid .navigationImage img {
+navWebsite img {
   height: 28px;
   width: 31px;
+  margin-top: 2.6vh;
+  margin-left: 2.49vw;
+  max-width: none;
 }
 
 navMobile {
   width: 78.9vw;
-  height: max(568px, 100vh);
+  height: 100vh;
   position: fixed;
-  max-height: 100%;
   top: 0px;
   left: 0px;
-  z-index: 21;
 }
 
 @media screen and (min-width: 800px) {
@@ -217,7 +185,6 @@ navMobile {
 
 navMobile.open {
   z-index: 20;
-  overflow: scroll;
 }
 
 navMobile .gridNavContainer {
@@ -230,7 +197,6 @@ navMobile .gridNavContainer {
   display: flex;
   margin: 0;
   padding: 0;
-  min-height: 568px;
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw);
   -webkit-transition: all 1s;
@@ -243,105 +209,75 @@ navMobile .gridNavContainer.open {
 }
 
 navMobile .gridNavContainer .topPart {
-  height: max(84.141px, 17.39vh);
+  height: 17.39vh;
   width: 100%;
   background-color: #2699fb;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+}
+
+navMobile .gridNavContainer .topPart .navTitle {
+  position: fixed;
+  margin-top: 5.62vh;
+  margin-left: 20.6vw;
 }
 
 navMobile .gridNavContainer .topPart img {
   height: 28px;
   width: 31px;
   max-width: none;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-top: 4.5vh;
+  margin-left: 7.2vw;
+  position: fixed;
 }
 
 navMobile .gridNavContainer .bottomPart {
   height: 100%;
-  width: inherit;
+  width: 100%;
   background-color: #7fc4fd;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-navMobile .gridNavContainer .bottomPart .bottomPartOne {
-  width: inherit;
-}
-
-navMobile .gridNavContainer .bottomPart .bottomPartOne div {
-  border-bottom: rgba(38, 153, 251, 0.2) 0.1rem solid;
-  height: max(52.922px, 9.6vh);
+navMobile .gridNavContainer .bottomPart .bottomPartOne ul {
   font-size: 0.625rem;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-navMobile .gridNavContainer .bottomPart .bottomPartOne div i {
+navMobile .gridNavContainer .bottomPart .bottomPartOne ul li {
+  display: block;
+  height: 9.6vh;
+  border-bottom: rgba(38, 153, 251, 0.2) 0.1rem solid;
+}
+
+navMobile .gridNavContainer .bottomPart .bottomPartOne ul li i {
   font-size: 1rem;
-  padding-left: 30px;
-  width: 40px;
-}
-
-navMobile .gridNavContainer .bottomPart .bottomPartOne div a {
-  padding-left: 30px;
+  padding-top: 2.7vh;
+  padding-left: 7.2vw;
+  padding-right: 5.2vw;
+  max-width: 16vw;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 navMobile .gridNavContainer .bottomPart .bottomPartTwo {
+  margin-top: 27.13vh;
   text-align: center;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: inherit;
-  width: inherit;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-navMobile .gridNavContainer .bottomPart .bottomPartTwo div ul li {
-  padding: 10px;
+navMobile .gridNavContainer .bottomPart .bottomPartTwo ul li {
+  padding-right: 2.92vw;
+  padding-left: 2.92vw;
 }
 
-navMobile .gridNavContainer .bottomPart .bottomPartTwo div .textEnding {
-  width: 75%;
-  margin: auto;
+navMobile .gridNavContainer .bottomPart .bottomPartTwo .textEnding {
+  margin-top: 4.04vh;
   font-size: 1rem;
   line-height: 1.25rem;
-  margin-bottom: 35px;
 }
 
 navMobile hamburger {
@@ -417,25 +353,22 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 768px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gridContainer .gridItemName {
   padding: 0;
   margin: 0;
+  padding-top: 27vh;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 3.5rem;
   font-weight: bold;
@@ -444,6 +377,7 @@ navMobile hamburger.open span::after {
 
 @media screen and (min-height: 1080px) {
   .gridContainer .gridItemName {
+    padding-top: 30vh;
     font-size: 3.125rem;
     font-size: 5rem;
   }
@@ -451,12 +385,15 @@ navMobile hamburger.open span::after {
 
 @media screen and (max-width: 1024px) {
   .gridContainer .gridItemName {
+    padding-top: 15vh;
     font-size: 3.125rem;
   }
 }
 
 .gridContainer .gridItemPhrase {
-  padding-top: min(56.783px, 5.86vh);
+  padding: 0;
+  margin: 0;
+  padding-top: 5.86vh;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.875rem;
   color: #7f7f7f;
@@ -473,12 +410,12 @@ navMobile hamburger.open span::after {
 .gridContainer .gridItemDescription {
   padding: 0;
   margin: 0;
-  padding-top: min(17.733px, 1.83vh);
+  padding-top: 1.83vh;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.25rem;
-  line-height: min(3.51vh, 2.5rem);
+  line-height: 3.51vh;
   text-align: center;
-  max-width: 50%;
+  max-width: 45vw;
   color: #7f7f7f;
 }
 
@@ -495,7 +432,9 @@ navMobile hamburger.open span::after {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  padding-top: min(44.09px, 4.55vh);
+  padding: 0;
+  margin: 0;
+  padding-top: 4.55vh;
 }
 
 @media screen and (max-width: 1024px) {
@@ -508,8 +447,6 @@ navMobile hamburger.open span::after {
 
 .gridContainer .gridItemButtons button {
   height: 7.42vh;
-  max-height: 69.891px;
-  max-width: 227.031px;
   width: 12.45vw;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.85rem;
@@ -564,20 +501,20 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerAboutMe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 768px;
+  padding-left: 16.8vw;
+  padding-right: 16.8vw;
+  padding-top: 13.28vh;
+  padding-bottom: 4.2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -612,7 +549,6 @@ navMobile hamburger.open span::after {
   display: grid;
   -ms-grid-columns: 5fr 3fr;
       grid-template-columns: 5fr 3fr;
-  max-width: 75%;
 }
 
 @media screen and (max-width: 1280px) {
@@ -626,8 +562,8 @@ navMobile hamburger.open span::after {
   -webkit-box-align: vertical;
       -ms-flex-align: vertical;
           align-items: vertical;
-  padding-left: min(96.9px, 10vh);
-  padding-top: min(96.9px, 10vh);
+  padding-left: 10vh;
+  padding-top: 10vh;
 }
 
 @media screen and (max-width: 1280px) {
@@ -642,8 +578,8 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerAboutMe .gridItemBody .ItemImage img {
-  height: min(192px, 10vw);
-  width: min(192px, 10vw);
+  height: 10vw;
+  width: 10vw;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: 10px 10px 5px #ccc;
@@ -677,7 +613,7 @@ navMobile hamburger.open span::after {
 
 .gridContainerAboutMe .gridItemBody .ItemBody p {
   margin: 0;
-  margin-top: min(19.38px, 2vh);
+  margin-top: 2vh;
 }
 
 @media screen and (max-width: 1280px) {
@@ -703,20 +639,20 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerProjects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 768px;
+  padding-left: 16.8vw;
+  padding-right: 16.8vw;
+  padding-top: 13.28vh;
+  padding-bottom: 4.2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -748,10 +684,9 @@ navMobile hamburger.open span::after {
 
 .gridContainerProjects .gridItemCarousel {
   height: 50vh;
-  max-height: 484.5px;
   position: relative;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) and (max-height: 900px) {
@@ -805,7 +740,7 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerProjects .gridItemCarousel .carouselItem .projectCard .projectTitle {
-  padding-top: min(48.45px, 5vh);
+  padding-top: 5vh;
   font-weight: bold;
   font-size: 2rem;
 }
@@ -823,18 +758,18 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerProjects .gridItemCarousel .carouselItem .projectCard .projectImage {
-  margin-top: min(38.76px, 4vh);
+  margin-top: 4vh;
 }
 
 .gridContainerProjects .gridItemCarousel .carouselItem .projectCard .projectImage img {
-  height: min(96.891px, 10vh);
-  width: min(96.891px, 10vh);
+  height: 10vh;
+  width: 10vh;
 }
 
 .gridContainerProjects .gridItemCarousel .carouselItem .projectCard .projectDescription {
   width: 50%;
   margin: auto;
-  margin-top: min(19.38px, 2vh);
+  margin-top: 2vh;
   line-height: 1.5rem;
   color: #707070;
 }
@@ -846,7 +781,7 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerProjects .gridItemCarousel .carouselItem .projectCard .projectLinks {
-  margin-top: min(19.38px, 2vh);
+  margin-top: 2vh;
   font-size: 2rem;
 }
 
@@ -866,16 +801,16 @@ navMobile hamburger.open span::after {
   color: #2699fb;
   position: absolute;
   z-index: 0;
-  font-size: min(48px, 2.5vw);
-  width: min(48px, 2.5vw);
-  height: min(48px, 2.5vw);
+  font-size: 2.5vw;
+  width: 2.5vw;
+  height: 2.5vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   vertical-align: middle;
   text-align: center;
   top: 40%;
-  line-height: min(44.16px, 2.5vw);
+  line-height: 2.3vw;
   cursor: pointer;
   display: none;
 }
@@ -947,20 +882,20 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerWork {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 768px;
+  padding-left: 16.8vw;
+  padding-right: 16.8vw;
+  padding-top: 13.28vh;
+  padding-bottom: 4.2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -992,10 +927,30 @@ navMobile hamburger.open span::after {
 
 .gridContainerWork .gridItemjob {
   height: 50vh;
-  max-height: 484.5px;
   position: relative;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .gridContainerWork .gridItemjob {
+    height: 90vh;
+    max-height: 80vh;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .gridContainerWork .gridItemjob {
+    height: 150vh;
+    max-height: 150vh;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 300px) {
+  .gridContainerWork .gridItemjob {
+    height: 175vh;
+    max-height: 175vh;
+  }
 }
 
 .gridContainerWork .gridItemjob .jobItem {
@@ -1034,7 +989,7 @@ navMobile hamburger.open span::after {
 .gridContainerWork .gridItemjob .jobItem .jobCard .jobTitle {
   font-weight: bold;
   font-size: 1.875rem;
-  padding-bottom: min(9.69px, 1vh);
+  padding-bottom: 1vh;
   border-bottom: 0.2rem solid #7fc4fd;
   line-height: 2rem;
 }
@@ -1051,7 +1006,7 @@ navMobile hamburger.open span::after {
 .gridContainerWork .gridItemjob .jobItem .jobCard .jobTitle img {
   width: 30px;
   height: 30px;
-  margin-top: min(9.69px, 1vh);
+  margin-top: 1vh;
 }
 
 @media screen and (max-width: 800px) {
@@ -1065,12 +1020,12 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerWork .gridItemjob .jobItem .jobCard .jobDate {
-  padding-top: min(9.69px, 1vh);
-  padding-bottom: min(9.69px, 1vh);
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .gridContainerWork .gridItemjob .jobItem .jobCard .jobDescription {
-  padding-top: min(19.38px, 2vh);
+  padding-top: 2vh;
   line-height: 1.5rem;
 }
 
@@ -1119,16 +1074,16 @@ navMobile hamburger.open span::after {
   color: #2699fb;
   position: absolute;
   z-index: 0;
-  font-size: min(48px, 2.5vw);
-  width: min(48px, 2.5vw);
-  height: min(48px, 2.5vw);
+  font-size: 2.5vw;
+  width: 2.5vw;
+  height: 2.5vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   vertical-align: middle;
   text-align: center;
   top: 95%;
-  line-height: min(44.16px, 2.5vw);
+  line-height: 2.3vw;
   cursor: pointer;
   display: none;
 }
@@ -1195,7 +1150,7 @@ navMobile hamburger.open span::after {
   cursor: pointer;
   display: block;
   font-size: 1.25rem;
-  height: min(72.675px, 7.5vh);
+  height: 7.5vh;
   width: 20%;
 }
 
@@ -1214,8 +1169,8 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerWork .gridItemjob .job-indicators .job-bullet .jobTitle {
-  padding-left: min(19.2px, 1vw);
-  padding-top: min(2.5vh, 25px);
+  padding-left: 1vw;
+  padding-top: 2.5vh;
 }
 
 .gridContainerWork .gridItemjob #job-1:checked ~ .control-1 ~ .job-indicators li:nth-child(1) .job-bullet,
@@ -1226,20 +1181,20 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerContact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-height: 768px;
+  padding-left: 16.8vw;
+  padding-right: 16.8vw;
+  padding-top: 13.28vh;
+  padding-bottom: 4.2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -1274,25 +1229,14 @@ navMobile hamburger.open span::after {
   -webkit-box-shadow: 10px 10px 5px #bce0fd;
           box-shadow: 10px 10px 5px #bce0fd;
   background-color: #ffffff;
-  width: min(750px, 50vw);
-  height: min(500px, 50vh);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: min(136.594px, 10%);
+  width: 45vw;
+  height: 50vh;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 2rem;
   color: #7f7f7f;
+  padding-left: 12.5vw;
+  padding-right: 12.5vw;
+  padding-top: 10vh;
   text-align: center;
 }
 
@@ -1309,14 +1253,12 @@ navMobile hamburger.open span::after {
 .gridContainerContact .gridItemBody .gridItemButtons {
   padding: 0;
   margin: 0;
-  padding-top: min(44.09px, 4.55vh);
+  padding-top: 4.55vh;
 }
 
 .gridContainerContact .gridItemBody .gridItemButtons button {
   height: 7.42vh;
   width: 12.45vw;
-  max-height: 69.891px;
-  max-width: 227.031px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.85rem;
   font-weight: bold;
@@ -1330,6 +1272,7 @@ navMobile hamburger.open span::after {
 }
 
 .gridContainerContact .gridItemBody .gridItemButtons button.buttonTwo {
+  margin-right: 0.59vw;
   color: #ffffff;
   background-color: #2699fb;
   border-width: 0px;
@@ -1375,7 +1318,7 @@ footer .leftPanel {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   color: #ffffff;
   font-size: 0.8rem;
-  margin-top: -min(33.915vh, 3.5vh);
+  margin-top: -3.5vh;
   width: 100%;
   height: 70px;
   margin: auto;
@@ -1419,7 +1362,6 @@ footer .footerArrow {
 footer .footerArrow button {
   background-color: #7fc4fd;
   width: 7.32vw;
-  max-width: 140.54px;
   height: 100%;
   border: none;
   color: white;
