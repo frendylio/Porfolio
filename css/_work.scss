@@ -6,13 +6,6 @@
     flex-direction: column;
 
 
-    @media screen and (max-width: 800px){	
-        padding-left: 1.5vw;	
-        padding-right: 1.5vw;	
-        padding-top: 5.25vh;	
-        align-items: center;
-
-    }  
 
     .gridItemTitle{
         font-family: $font-Georgia;
@@ -24,8 +17,8 @@
         @media screen and (max-width: 800px){	
             color: $blue;	
             font-family: $font-Arial;	
-            font-size: 0.875rem;	
-        }         
+            font-size: 2rem;
+        }               
     }
 
     .gridItemjob{
@@ -36,21 +29,44 @@
         overflow: hidden;
         width: 50%;
 
-        // @media screen and (max-width: 800px){	
-        //     height: 90vh;	
-        //     max-height: 80vh;
-        // }  
+        @media screen and (max-width: 800px){	
+            max-width: 100vw;
+            width: 75%;
+            height: 550px;
+            max-height: 100vh;
+        }  
+
+        @media screen and (max-width: 1024px) and (orientation: landscape){	
+            height: 500px;
+            max-height: 100vh;
+        }  
 
 
-        // @media screen and (orientation:landscape) {
-        //     height: 150vh;
-        //     max-height: 150vh;
-        // }
 
-        // @media screen and (orientation:landscape) and (max-height: 300px){
-        //     height: 175vh;
-        //     max-height: 175vh;
-        // }
+        @media screen and (max-height: 540px) and (orientation: landscape){	
+            max-width: 100vw;
+            width: 75%;
+            height: 400px;
+            max-height: 100vh;
+        }          
+
+        @media screen and (max-width: 800px) and (orientation:landscape) and(max-height: 300px){	
+            height: 400px;
+            max-height: 400px;
+        }  
+
+        @media screen and (max-width: 320px){	
+            max-width: 100vw;
+            width: 75%;
+            height: 100vh;
+            max-height: 100vh;
+        }  
+
+        @media screen and (max-width: 280px) and (orientation:portrait){	
+            height: 200vh;
+            max-height: 200vh;
+        }  
+
 
         // =================
         // Card
@@ -65,10 +81,7 @@
             line-height: 1.25rem;
             color: $black;
             text-align: center;
-            
-            @media screen and (max-width: 800px){	
-                font-size: 1rem;
-            }  
+
 
             .jobCard{
                 background: transparent;
@@ -188,7 +201,34 @@
 
             @media screen and (max-width: 800px){	
                 font-size: 10vw;
+                top: 95%;
             }  
+
+            @media screen and (max-height: 1024px) and (orientation:portrait and (min-width: 800px)){	
+                font-size: 10vw;
+                top: 80%;
+            }  
+
+            @media screen and (max-width: 800px) and (orientation:landscape){	
+                font-size: 10vw;
+                top: 80%;
+            }  
+
+            @media screen and (max-width: 800px) and (orientation:landscape) and(max-height: 300px){	
+                font-size: 10vw;
+                top: 80%;
+            }  
+
+            @media screen and (max-width: 600px) and (orientation:landscape){	
+                font-size: 10vw;
+                top: 90%;
+            }  
+
+            @media screen and (max-width: 280px) and (orientation:portrait){	
+                font-size: 10vw;
+                top: 93%;
+            }  
+
 
             &:hover{
                 background-color: $blue;

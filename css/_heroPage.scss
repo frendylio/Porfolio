@@ -4,7 +4,7 @@
     align-items: center;
     max-height: 768px;
     flex-direction: column;
-
+    
     .gridItemName{
         padding: 0;
         margin: 0;
@@ -13,31 +13,23 @@
         font-size: 3.5rem;
         font-weight: bold;
         color: $gray;
-
-        @media screen and (min-height: 1080px){
-            font-size: 3.125rem;
-            font-size: 5rem;
-        }
-
-        @media screen and (max-width: 1024px){
-            font-size: 3.125rem;
-        }
+        text-align: center;
 
     }
 
     .gridItemPhrase{
 
 
-        padding-top: min(56.783px,5.86vh);
+        padding-top: min(25px,5.86vh);
         font-family: $font-Arial;
         font-size: 1.875rem;
         color: $gray;
         text-align: center;
 
-        @media screen and (max-width: 1024px){
-            font-size: 1.875rem;
-            padding-top: 2.55vh;
+        @media screen and (max-width: 800px){
+            padding-top: min(15px,5.86vh);
         }
+
     }
 
     .gridItemDescription{
@@ -48,15 +40,21 @@
         font-family: $font-Segoe;
         font-size: 1.25rem;
         line-height: min(3.51vh, 2.5rem);
-        text-align: center;
+        text-align: justify;
         max-width: 50%;
         color: $gray;
 
-        @media screen and (max-width: 1023px){
-            padding-top: 2.84vh;
-            line-height: 1.68rem;
-            max-width: 100%;
+        @media screen and (max-width: 800px){
+            max-width: 80%;
+            line-height: 27px;
+            text-align: justify;
         }
+
+        @media screen and (orientation: landscape) and (max-width: 1024px){
+            line-height: 1.7rem;
+            max-width: 50%;
+        }
+
     }
 
     .gridItemButtons{
@@ -65,11 +63,11 @@
 
         padding-top: min(44.090px,4.55vh);
         
-        @media screen and (max-width: 1024px){
-            padding-top: 4.5vh;
+        @media screen and (max-width: 800px){
             grid-template-columns: 1fr;
-        }        
-        
+            padding-top: 40px;
+        }  
+
         button{
             height: 7.42vh;
             max-height: 69.891px;
@@ -85,12 +83,16 @@
                 outline: none;
             }
 
+            @media screen and (max-width: 800px){
+                width: 200px;
+            }    
+
+            @media screen and (orientation: landscape) and (max-width: 1024px){
+                width: 200px;
+                height: 50px;
+            }
+            
             &.buttonOne{
-                @media screen and (max-width: 1024px){
-                    width: 44.3vw;
-                    height: 8.55vh;
-                    font-size: 0.75rem;
-                }
                 
                 
                 margin-right: 0.59vw;
@@ -105,7 +107,7 @@
             }
 
             &.buttonTwo{
-                @media screen and (max-width: 1024px){
+                @media screen and (max-width: 800px){
                     visibility: hidden;
                 }
 

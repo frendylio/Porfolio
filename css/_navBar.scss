@@ -94,7 +94,7 @@ navMobile{
     max-height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 21;
+
     &.open{
         z-index: 20;
         overflow:scroll;
@@ -108,14 +108,15 @@ navMobile{
         min-height: 568px;
         transform: translateX(-100vw);
         transition: all 1s;
-
+        width: inherit;
         &.open{
             transform: translateX(0);
         }
 
         .topPart{
             height: max(84.141px,17.39vh);
-            width: 100%;
+            width: inherit;
+            
             background-color: $blue;
             font-family: $font-Arial;
             font-size: 0.875rem;
@@ -205,74 +206,72 @@ navMobile{
         }
 
     }
+}
 
-    hamburger{
+hamburger{
+    position: fixed;
+    width: 4.3vw;
+    height: 4.3vw;
+    margin-top: 5.1vh;
+    margin-left: 4.53vw;
+    cursor: pointer;
+    z-index: 21;
+
+    span{
+        width: inherit;
+        height: 0.3vh;
         position: fixed;
-        width: 4.3vw;
-        height: 4.3vw;
-        margin-top: 5.1vh;
-        margin-left: 4.53vw;
-        cursor: pointer;
+        background-color: $blue;
+        transition: all 1s;
 
-
-        span{
-            width: inherit;
+        &::before{
+            content: "";
+            display:block;
             height: 0.3vh;
-            position: fixed;
+            transform: translateY(0.75vh);
             background-color: $blue;
             transition: all 1s;
 
-            &::before{
-                content: "";
-                display:block;
-                height: 0.3vh;
-                transform: translateY(0.75vh);
-                background-color: $blue;
-                transition: all 1s;
-
-                @media screen and (orientation:landscape) {
-                    transform: translateY(1.5vh);
-                }
-
+            @media screen and (orientation:landscape) {
+                transform: translateY(1.5vh);
             }
 
-            &::after{
-                content: "";
-                display:block;
-                height: 0.3vh;
-                width: 50%;
-                transform: translateY(1.25vh);
-                background-color: $blue;
-                transition: all 1s;
-
-                @media screen and (orientation:landscape) {
-                    transform: translateY(3vh);
-                }
-
-            }
         }
 
-        &.open{
-            
-            span{
-                background-color: transparent;
-                transform: translateX(78.13vw);
-                &::before{
-                    transform: rotate(45deg);
-                }      
-                
-                &::after{
-                    width:100%;
-                    transform: translateY(-0.35vh) rotate(-45deg);
-                }  
+        &::after{
+            content: "";
+            display:block;
+            height: 0.3vh;
+            width: 50%;
+            transform: translateY(1.25vh);
+            background-color: $blue;
+            transition: all 1s;
+
+            @media screen and (orientation:landscape) {
+                transform: translateY(3vh);
             }
 
-        
         }
-        
     }
+
+    &.open{
+        
+        span{
+            background-color: transparent;
+            transform: translateX(78.13vw);
+            &::before{
+                transform: rotate(45deg);
+            }      
+            
+            &::after{
+                width:100%;
+                transform: translateY(-0.35vh) rotate(-45deg);
+            }  
+        }
+
+    
+    }
+    
 }
-
-
 
 
