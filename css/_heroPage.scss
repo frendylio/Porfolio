@@ -1,36 +1,34 @@
 .gridContainer{
-    flex-direction: column;
     display: flex;
+    justify-content: center;
     align-items: center;
+    max-height: 768px;
+    flex-direction: column;
 
     .gridItemName{
         padding: 0;
         margin: 0;
 
-        padding-top: 27vh;
         font-family: $font-Georgia;
         font-size: 3.5rem;
         font-weight: bold;
         color: $gray;
 
         @media screen and (min-height: 1080px){
-            padding-top: 30vh;
             font-size: 3.125rem;
             font-size: 5rem;
         }
 
         @media screen and (max-width: 1024px){
-            padding-top: 15vh;
             font-size: 3.125rem;
         }
 
     }
 
     .gridItemPhrase{
-        padding: 0;
-        margin: 0;
 
-        padding-top: 5.86vh;
+
+        padding-top: min(56.783px,5.86vh);
         font-family: $font-Arial;
         font-size: 1.875rem;
         color: $gray;
@@ -46,12 +44,12 @@
         padding: 0;
         margin: 0;
 
-        padding-top: 1.83vh;
+        padding-top: min(17.733px,1.83vh);
         font-family: $font-Segoe;
         font-size: 1.25rem;
-        line-height: 3.51vh;
+        line-height: min(3.51vh, 2.5rem);
         text-align: center;
-        max-width: 45vw;
+        max-width: 50%;
         color: $gray;
 
         @media screen and (max-width: 1023px){
@@ -65,10 +63,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        padding: 0;
-        margin: 0;
-
-        padding-top: 4.55vh;
+        padding-top: min(44.090px,4.55vh);
         
         @media screen and (max-width: 1024px){
             padding-top: 4.5vh;
@@ -77,6 +72,8 @@
         
         button{
             height: 7.42vh;
+            max-height: 69.891px;
+            max-width: 227.031px;
             width: 12.45vw;
             font-family: $font-Arial;
             font-size: 0.85rem;
