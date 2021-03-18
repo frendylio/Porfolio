@@ -861,6 +861,7 @@ hamburger.open span::after {
   -webkit-transition: all 1s;
   transition: all 1s;
   opacity: 100;
+  z-index: 1;
 }
 
 .gridContainerProjects .gridItemCarousel .carousel-control {
@@ -868,7 +869,7 @@ hamburger.open span::after {
   border-radius: 50%;
   color: #2699fb;
   position: absolute;
-  z-index: 0;
+  z-index: 2;
   font-size: min(48px, 2.5vw);
   width: min(48px, 2.5vw);
   height: min(48px, 2.5vw);
