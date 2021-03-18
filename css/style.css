@@ -765,14 +765,14 @@ hamburger.open span::after {
   max-height: 484.5px;
   position: relative;
   overflow: hidden;
-  width: 50%;
+  width: 55%;
 }
 
 @media screen and (max-width: 800px) {
   .gridContainerProjects .gridItemCarousel {
     max-width: 100vw;
-    width: 75%;
-    height: 500px;
+    width: 85%;
+    height: 550px;
     max-height: 100vh;
   }
 }
@@ -796,7 +796,7 @@ hamburger.open span::after {
 @media screen and (max-width: 320px) {
   .gridContainerProjects .gridItemCarousel {
     max-width: 100vw;
-    width: 75%;
+    width: 80%;
     height: 100vh;
     max-height: 100vh;
   }
@@ -829,6 +829,7 @@ hamburger.open span::after {
   padding-top: min(48.45px, 5vh);
   font-weight: bold;
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 .gridContainerProjects .gridItemCarousel .carouselItem .projectCard .projectImage {
@@ -905,7 +906,8 @@ hamburger.open span::after {
 
 .gridContainerProjects .gridItemCarousel #carousel-1:checked ~ .control-1,
 .gridContainerProjects .gridItemCarousel #carousel-2:checked ~ .control-2,
-.gridContainerProjects .gridItemCarousel #carousel-3:checked ~ .control-3 {
+.gridContainerProjects .gridItemCarousel #carousel-3:checked ~ .control-3,
+.gridContainerProjects .gridItemCarousel #carousel-4:checked ~ .control-4 {
   display: block;
 }
 
@@ -939,7 +941,8 @@ hamburger.open span::after {
 
 .gridContainerProjects .gridItemCarousel #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
 .gridContainerProjects .gridItemCarousel #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-.gridContainerProjects .gridItemCarousel #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+.gridContainerProjects .gridItemCarousel #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+.gridContainerProjects .gridItemCarousel #carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
   color: #2699fb;
 }
 
@@ -1113,6 +1116,12 @@ hamburger.open span::after {
   }
 }
 
+.gridContainerWork .gridItemjob .jobItem .jobCard .jobDescription p a {
+  color: #2699fb;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
   .gridContainerWork .gridItemjob .jobItem .jobCard .jobDescription {
     padding-top: 1vh;
@@ -1132,6 +1141,7 @@ hamburger.open span::after {
   -webkit-transition: all 1s;
   transition: all 1s;
   opacity: 100;
+  z-index: 1;
 }
 
 .gridContainerWork .gridItemjob #job-1:checked ~ .control-1,
@@ -1232,6 +1242,7 @@ hamburger.open span::after {
 .gridContainerWork .gridItemjob .job-indicators {
   position: absolute;
   width: 100%;
+  max-width: 150px;
   z-index: 10;
   padding: 0;
 }
@@ -1240,6 +1251,7 @@ hamburger.open span::after {
   .gridContainerWork .gridItemjob .job-indicators {
     margin: auto;
     text-align: center;
+    max-width: none;
   }
 }
 
@@ -1260,7 +1272,7 @@ hamburger.open span::after {
   display: block;
   font-size: 1.25rem;
   height: min(72.675px, 7.5vh);
-  width: 20%;
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -1270,6 +1282,12 @@ hamburger.open span::after {
     width: 6.0vh;
     border-left: 0;
     border-top: 0.3rem solid;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .gridContainerWork .gridItemjob .job-indicators .job-bullet {
+    width: 3.5vh;
   }
 }
 

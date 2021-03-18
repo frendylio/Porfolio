@@ -27,12 +27,12 @@
         max-height: 484.5px;
         position: relative;
         overflow: hidden;
-        width: 50%;
+        width: 55%;
 
         @media screen and (max-width: 800px){	
             max-width: 100vw;
-            width: 75%;
-            height: 500px;
+            width: 85%;
+            height: 550px;
             max-height: 100vh;
         }  
 
@@ -50,7 +50,7 @@
 
         @media screen and (max-width: 320px){	
             max-width: 100vw;
-            width: 75%;
+            width: 80%;
             height: 100vh;
             max-height: 100vh;
         }  
@@ -87,6 +87,7 @@
                     padding-top: min(48.450px,5vh);
                     font-weight: bold;
                     font-size: 2rem;
+                    line-height: 2rem;
                 }
 
 
@@ -172,7 +173,8 @@
 
         #carousel-1:checked ~ .control-1,
         #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
+        #carousel-3:checked ~ .control-3,
+        #carousel-4:checked ~ .control-4  {
             display: block;
         }
     
@@ -209,7 +211,8 @@
           
         #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
         #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+        #carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
             color: $blue;
         }
     
