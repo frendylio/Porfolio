@@ -3,7 +3,7 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow: auto;
-
+    max-width: 100%;
     @media screen and (max-width: 800px){
         font-size: 14px;
     }
