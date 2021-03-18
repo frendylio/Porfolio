@@ -217,6 +217,11 @@ hamburger{
     cursor: pointer;
     z-index: 21;
 
+    // Media queries for pc
+    @media screen and (min-width: 800px){
+        visibility: hidden;
+    }
+    
     span{
         width: inherit;
         height: 0.3vh;

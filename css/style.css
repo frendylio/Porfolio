@@ -384,6 +384,12 @@ hamburger {
   z-index: 21;
 }
 
+@media screen and (min-width: 800px) {
+  hamburger {
+    visibility: hidden;
+  }
+}
+
 hamburger span {
   width: inherit;
   height: 0.3vh;
