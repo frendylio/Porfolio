@@ -77,9 +77,9 @@ container{
 
 
     &.body{
-        transform: translateX(0);
+        position: relative;
         transition: all 1s;
-
+            
         &.open{
             transform: translateX(100vw);
         }

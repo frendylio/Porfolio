@@ -4,6 +4,7 @@ html {
           box-sizing: border-box;
   scroll-behavior: smooth;
   overflow: auto;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 800px) {
@@ -98,8 +99,7 @@ container {
 }
 
 container.body {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  position: relative;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
