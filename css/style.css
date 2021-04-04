@@ -501,7 +501,7 @@ hamburger.open span::after {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.25rem;
   line-height: min(3.51vh, 2.5rem);
-  text-align: justify;
+  text-align: center;
   max-width: 50%;
   color: #7f7f7f;
 }
@@ -510,7 +510,7 @@ hamburger.open span::after {
   .gridContainer .gridItemDescription {
     max-width: 80%;
     line-height: 27px;
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -768,6 +768,19 @@ hamburger.open span::after {
   width: 55%;
 }
 
+@media screen and (max-width: 1024px) {
+  .gridContainerProjects .gridItemCarousel {
+    width: 75%;
+  }
+}
+
+@media screen and (max-height: 720px) {
+  .gridContainerProjects .gridItemCarousel {
+    height: 100vh;
+    max-height: 60vh;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .gridContainerProjects .gridItemCarousel {
     max-width: 100vw;
@@ -987,6 +1000,12 @@ hamburger.open span::after {
   width: 50%;
 }
 
+@media screen and (max-width: 1024px) {
+  .gridContainerWork .gridItemjob {
+    width: 75%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .gridContainerWork .gridItemjob {
     max-width: 100vw;
@@ -1053,6 +1072,12 @@ hamburger.open span::after {
   text-align: left;
   width: inherit;
   margin-left: min(15vw, 192px);
+}
+
+@media screen and (max-width: 1024px) {
+  .gridContainerWork .gridItemjob .jobItem .jobCard {
+    margin-left: 150px;
+  }
 }
 
 @media screen and (max-width: 800px) {

@@ -40,14 +40,14 @@
         font-family: $font-Segoe;
         font-size: 1.25rem;
         line-height: min(3.51vh, 2.5rem);
-        text-align: justify;
+        text-align: center;
         max-width: 50%;
         color: $gray;
 
         @media screen and (max-width: 800px){
             max-width: 80%;
             line-height: 27px;
-            text-align: justify;
+            text-align: center;
         }
 
         @media screen and (orientation: landscape) and (max-width: 1024px){

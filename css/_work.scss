@@ -29,6 +29,10 @@
         overflow: hidden;
         width: 50%;
 
+        @media screen and (max-width: 1024px){	
+            width: 75%;
+        }  
+
         @media screen and (max-width: 800px){	
             max-width: 100vw;
             width: 75%;
@@ -90,6 +94,11 @@
                 width: inherit;
                 margin-left: min(15vw, 192px);
 
+                @media screen and (max-width: 1024px){	
+                    margin-left: 150px;
+                }  
+        
+                
                 @media screen and (max-width: 800px){	
                     padding-top: 3vh;
                     margin-left: 0vw;
@@ -314,7 +323,7 @@
 
                 .jobTitle{
                     padding-left: min(19.2px,1vw);
-                    padding-top: min(2.5vh, 25px);
+                    padding-top: min(2.5vh, 25px);                  
                 }
             }
         }
